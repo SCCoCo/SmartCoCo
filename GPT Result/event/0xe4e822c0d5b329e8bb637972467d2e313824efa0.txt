@@ -1,0 +1,19 @@
+/**
+ * Start migrations.
+ *
+ * Emits a {MigrationsStarted} event.
+ *
+ * Requirements:
+ * - Caller must have owner role.
+ * - Migrating isn't allowed.
+ */
+function allowMigrations() external override returns (bool) {
+	require(hasRole(DEFAULT_ADMIN_ROLE, msg.sender), 'XFIToken: sender is not owner');
+	require(!_migratingAllowed, 'XFIToken: migrating is allowed');
+
+	_migratingAllowed = true;
+
+	emit MigrationsAllowed();
+
+	return true;
+}

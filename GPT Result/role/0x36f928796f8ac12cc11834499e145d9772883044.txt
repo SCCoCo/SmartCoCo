@@ -1,0 +1,24 @@
+contract BetokenFund is BetokenStorage, Utils, TokenController { 
+    
+  modifier during(CyclePhase phase) {
+    require(cyclePhase == phase);
+    _;
+  }
+
+  /**
+   * @notice Passes if the fund is ready for migrating to the next version
+   */
+  modifier readyForUpgradeMigration {
+    require(hasFinalizedNextVersion == true);
+    require(now > startTimeOfCyclePhase.add(phaseLengths[uint(CyclePhase.Intermission)]));
+    _;
+  }
+  
+  /**
+   * @notice Allows managers to invest in a token. Only callable by owner.
+   * @param _token address of the token to be listed
+   */
+  function listKyberToken(address _token) public onlyOwner {
+    isKyberToken[_token] = true;
+  }
+}

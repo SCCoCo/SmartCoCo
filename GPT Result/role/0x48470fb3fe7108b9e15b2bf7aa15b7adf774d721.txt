@@ -1,0 +1,26 @@
+contract SateNFT is StarlERC721("Starlink Game Satellite", "SATE") {    
+	
+	/**
+     @notice Updates the auction contract
+     @dev Only governance can call
+     @param _auction New auction contract
+     */
+    function setAuction(address _auction) external onlyGovernance {
+        auction = _auction;
+    }
+    
+    /**
+     @dev Only admin or a smart contract can call this method
+     @param _tokenIds The ID of the token being updated
+     @param _salePrices The primary Ether sale price in WEI
+     */
+    function batchSetPrimarySalePrice(uint256[] memory _tokenIds, uint256[] memory _salePrices) external onlyGovernance {
+        require(
+            _tokenIds.length == _salePrices.length,
+            "Must have equal length arrays"
+        );
+        for( uint256 i; i< _tokenIds.length; i++){
+            _setPrimarySalePrice(_tokenIds[i], _salePrices[i]);
+        }
+    }
+}

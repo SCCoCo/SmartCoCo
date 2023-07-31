@@ -1,0 +1,37 @@
+contract SakeILO is Ownable, Pausable, ReentrancyGuard{
+   /**
+     * @dev Get LP amount to unlock
+     * Emits a {UnlockLP} event.
+     *
+     * Parameters:
+     * - `isInvestor` whether caller is project party or investor
+     *
+     * Returns:
+     * - `availableTimes` is frequency times to unlock
+     * - `amount` is lp amount to unlock 
+     */
+    function getUnlockLPAmount(bool isInvestor, address user) public view returns (uint256 availableTimes, uint256 amount) {
+        require(lpUnlockStartTimestamp > 0, "add liquidity not finished");
+
+        uint256 totalTimes = 0; 
+        if (block.timestamp > lpUnlockStartTimestamp.add(lpLockPeriod)){
+            totalTimes = lpLockPeriod.div(lpUnlockFrequency);
+        }else{
+            totalTimes = (block.timestamp.sub(lpUnlockStartTimestamp)).div(lpUnlockFrequency);      
+        }
+
+        if (isInvestor){
+            availableTimes = totalTimes.sub(investorUnlockedLPTimes[user]);
+            require(availableTimes > 0, "zero amount to unlock");
+
+            uint256 totalRelease = perUnlockLP.mul(availableTimes);
+            amount = totalRelease.div(2).mul(investorContributed[user]).div(totalInvestorContributed);
+        }else{
+            availableTimes = totalTimes.sub(projectPartUnlockedLPTimes);
+            require(availableTimes > 0, "zero amount to unlock");
+
+            uint256 totalRelease = perUnlockLP.mul(availableTimes);
+            amount = totalRelease.div(2);    
+        }
+    } 
+}

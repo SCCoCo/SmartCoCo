@@ -1,0 +1,64 @@
+library Orchestrator {
+
+	function setParams (
+			ShellStorage.Shell storage shell,
+			uint256 _alpha,
+			uint256 _beta,
+			uint256 _feeAtHalt,
+			uint256 _epsilon,
+			uint256 _lambda
+		) external {
+			require(0 < _alpha && _alpha < 1e18, "Shell/parameter-invalid-alpha");
+
+			require(0 <= _beta && _beta < _alpha, "Shell/parameter-invalid-beta");
+
+			require(_feeAtHalt <= .5e18, "Shell/parameter-invalid-max");
+
+			require(0 <= _epsilon && _epsilon <= .01e18, "Shell/parameter-invalid-epsilon");
+
+			require(0 <= _lambda && _lambda <= 1e18, "Shell/parameter-invalid-lambda");
+		}
+}
+
+
+contract Shell is ShellStorage {
+
+	constructor (
+        address[] memory _assets,
+        uint[] memory _assetWeights,
+        address[] memory _derivativeAssimilators
+    ) public {
+        
+        owner = msg.sender;
+        emit OwnershipTransfered(address(0), msg.sender);
+        
+        Orchestrator.initialize(
+            shell,
+            numeraires,
+            reserves,
+            derivatives,
+            _assets,
+            _assetWeights,
+            _derivativeAssimilators
+        );
+
+    }
+
+    /// @notice sets the parameters for the pool
+    /// @param _alpha the value for alpha (halt threshold) must be less than or equal to 1 and greater than 0
+    /// @param _beta the value for beta must be less than alpha and greater than 0
+    /// @param _feeAtHalt the maximum value for the fee at the halt point
+    /// @param _epsilon the base fee for the pool
+    /// @param _lambda the value for lambda must be less than or equal to 1 and greater than zero
+    function setParams (
+        uint _alpha,
+        uint _beta, 
+        uint _feeAtHalt,
+        uint _epsilon,
+        uint _lambda
+    ) external onlyOwner {
+
+        Orchestrator.setParams(shell, _alpha, _beta, _feeAtHalt, _epsilon, _lambda);
+
+    }
+}

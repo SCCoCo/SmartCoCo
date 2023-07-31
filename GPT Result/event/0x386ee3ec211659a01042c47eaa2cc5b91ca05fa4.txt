@@ -1,0 +1,15 @@
+interface IERC721 is IERC165 {
+     * Requirements:
+     *
+     * - The `operator` cannot be the caller.
+     *
+     * Emits an {ApprovalForAll} event.
+     */
+    function setApprovalForAll(address operator, bool _approved) external;
+}
+
+contract RtistiqToken is Context, ERC165, IERC721{
+    function setApprovalForAll(address operator, bool _approved) public virtual override {
+        require(operator != _msgSender(), "ERC721: approve to caller");
+    }
+}

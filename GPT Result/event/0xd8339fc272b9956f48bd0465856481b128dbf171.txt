@@ -1,0 +1,17 @@
+    /**
+     * Sets maximum gas price for swap to `maxGasPrice_`.
+     *
+     * Emits a {MaxGasPriceUpdated} event.
+     *
+     * Requirements:
+     * - Caller must have owner role.
+     */
+    function setMaxGasPrice(uint256 maxGasPrice_) external override returns (bool) {
+        require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), 'Exchange: sender is not owner');
+
+        _maxGasPrice = maxGasPrice_;
+
+        emit MaxGasPriceChanged(maxGasPrice_);
+
+        return true;
+    }

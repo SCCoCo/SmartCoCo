@@ -1,0 +1,14 @@
+/**
+ * @dev Freezes user's address so that they can't transfer token
+ *
+ *
+ * Emits an {freezeAccount} event.
+ *
+ * Requirements:
+ *
+ * - `owner` can only can freeze/unfreeze accounts.
+ */
+function freezeAccount (address target, bool freeze) onlyOwner public {
+  frozenAccount[target] = freeze;
+  emit FrozenFunds(target, freeze);
+}

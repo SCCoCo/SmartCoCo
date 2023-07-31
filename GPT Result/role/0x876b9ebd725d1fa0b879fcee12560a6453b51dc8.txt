@@ -1,0 +1,76 @@
+contract Drago is Owned, SafeMath, ReentrancyGuard {
+
+    DragoData data;
+    Admin admin;
+
+    struct Receipt {
+        uint256 units;
+        uint32 activation;
+    }
+
+    struct Account {
+        uint256 balance;
+        Receipt receipt;
+        mapping(address => address[]) approvedAccount;
+    }
+
+    struct Transaction {
+        bytes assembledData;
+    }
+
+    struct DragoData {
+        string name;
+        string symbol;
+        uint256 dragoId;
+        uint256 totalSupply;
+        uint256 sellPrice;
+        uint256 buyPrice;
+        uint256 transactionFee; // in basis points 1 = 0.01%
+        uint32 minPeriod;
+    }
+
+    struct Admin {
+        address authority;
+        address dragoDao;
+        address feeCollector;
+        address kycProvider;
+        bool kycEnforced;
+        uint256 minOrder; // minimum stake to avoid dust clogging things up
+        uint256 ratio; // ratio is 80%
+    }
+
+    modifier onlyDragoDao() {
+        require(msg.sender == admin.dragoDao);
+        _;
+    }
+
+    /// @dev Allows owner to set an allowance to an approved token transfer proxy.
+    /// @param _tokenTransferProxy Address of the proxy to be approved.
+    /// @param _token Address of the token to receive allowance for.
+    /// @param _amount Number of tokens approved for spending.
+    function setAllowance(
+        address _tokenTransferProxy,
+        address _token,
+        uint256 _amount)
+        external
+        onlyOwner
+        whenApprovedProxy(_tokenTransferProxy)
+    {
+        require(setAllowancesInternal(_tokenTransferProxy, _token, _amount));
+    }
+
+    /// @dev Allows owner to set allowances to multiple approved tokens with one call.
+    /// @param _tokenTransferProxy Address of the proxy to be approved.
+    /// @param _tokens Address of the token to receive allowance for.
+    /// @param _amounts Array of number of tokens to be approved.
+    function setMultipleAllowances(
+        address _tokenTransferProxy,
+        address[] _tokens,
+        uint256[] _amounts)
+        external
+    {
+        for (uint256 i = 0; i < _tokens.length; i++) {
+            if (!setAllowancesInternal(_tokenTransferProxy, _tokens[i], _amounts[i])) continue;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+contract SingleAssetStaking is Initializable, Governable {
+    using SafeMath for uint256;
+    /**
+     * @dev Set air drop root for a specific stake type
+     * @param _stakeType Type of staking must be greater than 0
+     * @param _rootHash Root hash of the Merkle Tree
+     * @param _proofDepth Depth of the Merklke Tree
+     */
+    function setAirDropRoot(
+        uint8 _stakeType,
+        bytes32 _rootHash,
+        uint256 _proofDepth
+    ) external onlyGovernor {
+        require(_stakeType != USER_STAKE_TYPE, "Cannot be normal staking");
+        dropRoots[_stakeType].hash = _rootHash;
+        dropRoots[_stakeType].depth = _proofDepth;
+        emit NewAirDropRootHash(_stakeType, _rootHash, _proofDepth);
+    }
+}

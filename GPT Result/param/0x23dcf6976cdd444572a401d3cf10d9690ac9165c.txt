@@ -1,0 +1,25 @@
+contract StakePoolSimpleCombined is IStakePool, StakeToken, AccessControl, ReentrancyGuard {
+   
+   /**
+     * @dev Claim reward.
+     *
+     * Requirements:
+     *
+     * - stake token owner must call
+     * - `amount` must be less than claimable reward
+     * @param amount claim amount
+     */
+    function claimReward(
+        uint256 tokenId,
+        uint256 amount
+    )
+        external
+        nonReentrant
+    {
+        require((ownerOf(tokenId) == msg.sender), "StakePool#claimReward: CALLER_NO_TOKEN_OWNER");
+        require(claimableRewards[tokenId] >= amount, "StakePool#claimReward: INSUFFICIENT_FUNDS");
+        claimableRewards[tokenId] -= amount;
+        rewardToken.safeTransfer(msg.sender, amount);
+        emit RewardClaimed(msg.sender, amount);
+    }
+}

@@ -1,0 +1,66 @@
+abstract contract DeCashBase {
+    // Version of the contract
+    uint8 public version;
+
+    // The main storage contract where primary persistant storage is maintained
+    DeCashStorageInterface internal _decashStorage = DeCashStorageInterface(0);
+
+    /**
+     * @dev Throws if called by any sender that doesn't match one of the supplied contract or is the latest version of that contract
+     */
+    modifier onlyLatestContract(
+        string memory _contractName,
+        address _contractAddress
+    ) {
+        require(
+            _contractAddress ==
+                _getAddress(
+                    keccak256(
+                        abi.encodePacked("contract.address", _contractName)
+                    )
+                ),
+            "Invalid or outdated contract"
+        );
+        _;
+    }
+
+    modifier onlyOwner() {
+        require(_isOwner(msg.sender), "Account is not the owner");
+        _;
+    }
+    modifier onlyAdmin() {
+        require(_isAdmin(msg.sender), "Account is not an admin");
+        _;
+    }
+    modifier onlySuperUser() {
+        require(_isSuperUser(msg.sender), "Account is not a super user");
+        _;
+    }
+}
+
+contract DeCashToken is DeCashBase, DeCashMultisignature, ERC20 {
+    using SafeMath for uint256;
+
+    string private _name;
+    string private _symbol;
+    uint8 private _decimals;
+
+/**
+     * @dev Allows owners to change number of required signature for multiSignature Operations
+     * @param _reqsign defines how many signature is required
+     */
+    function changeRequiredSigners(uint256 _reqsign)
+        external
+        onlySuperUser
+        onlyLastest
+        returns (uint256)
+    {
+        _setReqSign(_reqsign);
+
+        uint256 _generation = _getSignGeneration() + 1;
+        _setSignGeneration(_generation);
+
+        emit RequiredSignerChanged(_reqsign, _generation);
+
+        return _generation;
+    }

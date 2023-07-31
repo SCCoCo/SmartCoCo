@@ -1,0 +1,20 @@
+/**
+  * @dev Allows token issuer to lock token transfer for an address.
+  * @param target Target address to lock token transfer.
+  */
+function lockAddress(
+	address target
+)
+	public
+	onlyOwner
+{
+	require(!lockingDisabled);
+	require(owner != target);
+	require(!lockedStatusAddress[target]);
+	for(uint256 i = 0; i < vestedAddresses.length; i++) {
+		require(tokenVestingContracts[vestedAddresses[i]] != target);
+	}
+	lockedStatusAddress[target] = true;
+	emit Locked(target);
+}
+

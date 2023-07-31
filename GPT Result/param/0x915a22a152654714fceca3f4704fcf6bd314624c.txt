@@ -1,0 +1,18 @@
+contract StarNFTV1 is ERC165, IERC1155, IERC1155MetadataURI, IStarNFT, Ownable {  
+    
+     * Requirements:
+     * - `ids` and `amounts` must have the same length.
+     */
+    function _burnBatch(address account, uint256[] memory ids) private {
+        uint256[] memory amounts = new uint256[](ids.length);
+        for (uint i = 0; i < ids.length; i++) {
+            delete starBelongTo[ids[i]];
+            //            delete _quasars[ids[i]];
+            //            delete _supers[ids[i]];
+            //            delete _stars[ids[i]];
+            amounts[i] = 1;
+        }
+
+        emit TransferBatch(msg.sender, account, address(0), ids, amounts);
+    }
+}

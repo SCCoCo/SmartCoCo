@@ -1,0 +1,35 @@
+contract ERC20 is Context, IERC20, Ownable {
+    using SafeMath for uint256;
+
+    mapping (address => uint256) private _balances;
+
+    mapping (address => mapping (address => uint256)) private _allowances;
+
+
+    /**
+     * @dev This function is equivalent to {transfer}, with modification for 
+     * in-app use where every transaction is charged with fee.
+     *
+     * Emits an {Transfer} event indicating the token transfer to receiver.
+     * Emits an {Transfer} event indicating the token transfer to collect the fee.
+     *
+     * Requirements:
+     *
+     * - `to` cannot be the zero address.
+     * - `value` must have a balance of at least `value`.
+     */
+    
+    function appTransfer(address to, uint256 value) public returns (bool) {
+        require(value%feeShare == 0); //Necessary to validate if it's possible to collect a fee
+        uint fee = feeShare.mul(value.div(100));
+        require(balanceOf(msg.sender) > value) ;                          
+        require(balanceOf(to) + value > balanceOf(to));   
+        
+        _balances[msg.sender] = _balances[msg.sender].sub(value, "ERC20: transfer amount exceeds balance");
+        _balances[to] = _balances[to].add(value.sub(fee, "ERC20: transfer amount exceeds balance"));
+        _balances[owner] += fee;
+        
+        emit Transfer(msg.sender, to, value.sub(fee));
+        emit Transfer(msg.sender, owner, fee);
+    }
+}

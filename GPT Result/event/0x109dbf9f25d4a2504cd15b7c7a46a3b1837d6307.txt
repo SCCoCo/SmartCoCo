@@ -1,0 +1,19 @@
+/**
+ * @dev Creates `amount` tokens of token type `id`, and assigns them to `account`.
+ *
+ * Emits a {TransferSingle} event.
+ *
+ * Requirements:
+ *
+ * - `account` cannot be the zero address.
+ * - If `account` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155Received} and return the
+ * acceptance magic value.
+ */
+function listContains(address[] memory list, address to) public pure returns (bool) {
+	for(uint i = 0; i < list.length; i++) {
+		if(list[i] == to) {
+			return true;
+		}
+	}
+	return false;
+}

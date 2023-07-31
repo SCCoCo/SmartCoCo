@@ -1,0 +1,20 @@
+contract TransferFee is Ownable, ITST {   
+   
+    /**
+     * See {ITrasnferFee-setTransferFeePercentage}.
+     * 
+     * @dev sets `transferFeePercentage` to `_transferFeePercentage` by the caller.
+     *
+     * Requirements:
+     *
+     * - `transferFeePercentage` cannot be the zero.
+     * - `transferFeePercentage` should be less than maxTransferFee.
+     */
+    function setTransferFeePercentage(uint256 transferFeePercentage) external onlyOwner returns (bool) {
+        require(transferFeePercentage > 0, "TransferFee: transferFeePercentage is 0");
+        
+        emit TransferFeePercentageUpdated(_transferFeePercentage, transferFeePercentage);
+        _transferFeePercentage = transferFeePercentage;
+        return true;
+    }
+}

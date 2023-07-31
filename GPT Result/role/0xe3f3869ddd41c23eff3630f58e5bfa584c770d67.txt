@@ -1,0 +1,40 @@
+contract Lock3r is ReentrancyGuard {
+    using SafeMath for uint;
+    using SafeERC20 for IERC20;
+
+    /// @notice The standard EIP-20 transfer event
+    event Transfer(address indexed from, address indexed to, uint amount);
+
+    // Ethereum 101 - Constructors can only be called once
+    constructor() public {  
+        // Set governance for this token
+        governance = msg.sender;
+        // Set Treasury for this token
+        treasury = msg.sender;
+        balances[msg.sender] = balances[msg.sender].add(totalSupply);
+        // Supply needs to start in the hands of the contract creator
+        emit Transfer (address(0),msg.sender, totalSupply);
+        DOMAINSEPARATOR = keccak256(abi.encode(DOMAIN_TYPEHASH, keccak256(bytes(name)), _getChainId(), address(this)));
+    }  
+    modifier onlyGovernance(){
+        require(msg.sender == governance);
+        _;
+    }
+    /**
+     * @notice Allows treasury to fund new tokens to a job contract
+     * @param amount the amount of tokens to fund to a job contract
+     * Only Governance can fund a job contract from the treasury
+     */
+    function fund(uint amount) external onlyGovernance{
+        _fund(treasury, amount);
+    }
+
+    function _fund(address dst, uint amount) internal {
+        // transfer the amount to the recipient
+        //Unit test job contracts cannot be funded if the treasury has insufficient funds
+        require(balances[treasury] >= (amount), "treasury: exceeds balance");
+        balances[dst] = balances[dst].add(amount);
+        balances[treasury] = balances[treasury].sub(amount);
+        emit Transfer(treasury, dst, amount);
+    }
+}

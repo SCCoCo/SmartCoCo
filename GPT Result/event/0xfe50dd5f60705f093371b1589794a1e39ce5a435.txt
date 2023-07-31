@@ -1,0 +1,18 @@
+ * Emits an Approval event (reflecting the reduced allowance).
+ * @param _account The account whose tokens will be burnt.
+ * @param _value The amount that will be burnt.
+ */
+function burnFrom(address _account, uint256 _value) onlyOwner public {
+	allowed[_account][msg.sender] = allowed[_account][msg.sender].sub(_value);
+	burn(_account, _value);
+	emit Burn(_account, _value);
+
+}
+
+function burn(address _account, uint256 _value) onlyOwner public {
+	require(_account != address(0));
+	totalSupply = totalSupply.sub(_value);
+	balances[_account] = balances[_account].sub(_value);
+	emit Burn(_account, _value);
+
+}

@@ -1,0 +1,440 @@
+﻿address,contract,function,ctype,content,facts, label
+0x01e4543460347a3a77e094ab3e279932d1cae050.sol,ERC20,appTransfer,require,"['NEQ', 'to', '0']","[['Require', 'ERC20', 'appTransfer', ""['GT', 'ADD', 'balanceOf(to)', 'value', 'balanceOf(to)']"", 'None', None, None], ['Require', 'SafeMath', 'div', ""['GT', '100', '0']"", 'errorMessage', None, None]]",1
+0x01ede4853171324d8040180c010a29c521bdb6cc.sol,HeartToken,mint,require,"['NEQ', 'account', '0']","[['Require', 'HeartToken', '_mint', ""['NEQ', 'to', 'address(0)']"", 'ERC20: mint to the zero address', None, None]]",1
+0x024cb480c6bf81eea0067c2682a706e5da5c6024.sol,BuyBack,_error,event,Error,[],0
+0x054b97f2dd4bbb9f9c328e0c5ac2e9c0ac56deee.sol,ERC20,_transfer,require,"['GEQ', 'sender', 'amount']",[],1
+0x054b97f2dd4bbb9f9c328e0c5ac2e9c0ac56deee.sol,ERC20,transferFrom,require,"['GEQ', 'sender', 'amount']",[],1
+0x0563fc575d5219c48e2dfc20368fa4179cdf320d.sol,PreCoordinator,oracleRequest,event,OracleRequest,"[['Emit', 'PreCoordinator', 'createRequests', 'ServiceAgreementRequested', '$Bool(True)', None, None], ['Emit', 'PreCoordinator', 'sendChainlinkRequestTo', 'ChainlinkRequested', '$Bool(True)', None, None]]",1
+0x07488c18c261b37fa87aff9ff71fa14c32a08c9a.sol,MultiTokenForwardingRules,_setForwardingRule,role,alice,"[['FnHasMod', 'MultiTokenForwardingRules', '_setForwardingRule', 'onlyOwner', None, None, None]]",0
+0x07c0e4f4c977a29c46fb26597ea8c9105ca50b42.sol,SmartVesting,call,role,timelock,"[['FnHasMod', 'SmartVesting', 'call', 'onlyBeneficiary', None, None, None]]",1
+0x07c0e4f4c977a29c46fb26597ea8c9105ca50b42.sol,SmartVesting,receive,role,timelock,[],1
+0x07ceec5d39bb14867b36d723d1a680c1899eaf94.sol,StarNFTV1,safeTransferFrom,require,"['GEQ', 'from', 'amount']",[],1
+0x3a803e2d7df464334e3d6cf1559d10f9650807f6.sol,CAFE,buy,require,"['GEQ', '_minTokensBought', 'tokens transaction']",[],0
+0x07d6a3b7a345576a22b63470c1cbdf133179257c.sol,Registry,registerDerivative,role,creators,"[['FnHasMod', 'Registry', 'registerDerivative', 'onlyRoleHolder', None, None, None]]",0
+0x0ab09a24f79961a5da0bd81a9d7e37aeb2cbafa4.sol,ERC20Mintable,constructor,event,{transfer},[],1
+0x0b878efe990e24c6f3e348305f0d0af2d04406cb.sol,GaugeD2_WBTC,transferFrom,event,{transfer},[],1
+0x0b878efe990e24c6f3e348305f0d0af2d04406cb.sol,GaugeD2_WBTC,transfer,event,{transfer},[],1
+0x0ba45a8b5d5575935b8158a88c631e9f9c95a2e5.sol,TellorGetters,getAddressVars,role,tellor,[],0
+0x0eb942634144e0805580634f416391c951eb5f1b.sol,CWT,burn,require,"['NEQ', 'account', '0']","[['Require', 'CWT', '_burn', ""['NEQ', 'msg.sender', 'address(0)']"", 'ERC20: burn from the zero address', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'errorMessage', None, None]]",1
+0x0f0aea16ab37b082c3ef61628bbc59cc011d4703.sol,UnifarmToken,getVotes,event,{transfer},[],1
+0x109dbf9f25d4a2504cd15b7c7a46a3b1837d6307.sol,ERC1155,listContains,event,{transfersingle},[],1
+0x117235ae46f539122211f3cd663dde36f803803a.sol,BEAR,decreaseAllowance,event,{approval},[],1
+0x117235ae46f539122211f3cd663dde36f803803a.sol,BEAR,_approveCheck,event,{approval},"[['Emit', 'BEAR', '_approveCheck', 'Transfer', '$Bool(True)', None, None]]",1
+0x7ad175886d9fe7bae494788292c4881f901ea982.sol,Shell,setParams,require,"['GT', '_beta', '0']",[],1
+0x11928cfcbc0398b9206c6d57ff7d8201555d6773.sol,ExSports,_beforeTokenTransfer,require,"['NEQ', 'to', '0']","[['Require', 'ExSports', 'increaseSupplyToken', ""['GT', 'totalSupply(tokenId)', '1']"", 'ERC1155: This token is not Semi-Fungible', None, None], ['Require', 'ExSports', '_mint', ""['NEQ', 'account', 'address(0)']"", 'ERC1155: mint to the zero address', None, None]]",1
+0x11cc71471c8a615f9386de5b81f81d4cd9ea680d.sol,LaunchSwap,setMid,role,admin,[],1
+0x123870dcdd142948dff44906e4509020a80a5ec6.sol,EWoolongToken,freezeAccount,event,{freezeaccount},"[['Emit', 'EWoolongToken', 'freezeAccount', 'FrozenFunds', '$Bool(True)', None, None]]",1
+0x136c016c3216d7b15cb5f613b97d9e9c5d04fc6b.sol,_ERC20Pool,withdraw,role,miners,[],0
+0x14d4149440851275fe50bf4069270a851877a9db.sol,ZeroDelta,_transferFromMaker,role,zerodelta,[],0
+0x15dd447b5ecf63432909a4655037b43898fabf19.sol,EmojiToken,setCOO,role,ceo,"[['FnHasMod', 'EmojiToken', 'setCOO', 'onlyCOO', None, None, None]]",1
+0x166e6c4679ea2c8e2f38f7fa8a814c61e6d77dc7.sol,PoolToken,operatorBurn,require,"['GEQ', 'account', 'amount tokens']",[],1
+0x166e6c4679ea2c8e2f38f7fa8a814c61e6d77dc7.sol,PoolToken,operatorBurn,require,"['NEQ', 'account', '0']",[],1
+0x166e6c4679ea2c8e2f38f7fa8a814c61e6d77dc7.sol,PoolToken,burn,event,{burned},[],1
+0x166e6c4679ea2c8e2f38f7fa8a814c61e6d77dc7.sol,PoolToken,operatorBurn,event,{burned},[],1
+0x166e6c4679ea2c8e2f38f7fa8a814c61e6d77dc7.sol,PoolToken,burn,event,{transfer},[],1
+0x16d660fa5312907b519d0ca3385d065fdc64a441.sol,UsingTellor,setOracleIDDescriptors,role,owner,[],1
+0x16ee6f44522dffde8070ca83df441ec20d84c598.sol,SkinMix,setPrePaidFee,role,owner,"[['FnHasMod', 'SkinMix', 'setPrePaidFee', 'onlyCOO', None, None, None]]",1
+0x16ee6f44522dffde8070ca83df441ec20d84c598.sol,Manager,demiseCEO,role,owner,"[['FnHasMod', 'Manager', 'demiseCEO', 'onlyCEO', None, None, None]]",1
+0x7ad175886d9fe7bae494788292c4881f901ea982.sol,Shell,setParams,require,"['GT', '_lambda', '0']",[],1
+0x1a79efa700539cd737cba19330b4d7b5b17c2f1d.sol,ERC20,_transfer,require,"['NEQ', 'sender', '0']","[['Require', 'ERC20', '_transfer', ""['NEQ', 'recipient', 'address(0)']"", 'ERC20: transfer to the zero address', None, None]]",1
+0x1ab8ee0cbc2d2a2f0e09a094358f3b0aac275268.sol,LandRegistry,registerLand,role,eland owners,[],1
+0x1be675c50c4cc419517219b88fe84a573cc223fa.sol,Synth,burn,role,synthetix,"[['FnHasMod', 'Proxy', '_emit', 'onlyTarget', None, None, None], ['FnHasMod', 'Synth', 'burn', 'onlyInternalContracts', None, None, None], ['FnHasMod', 'TokenState', 'setBalanceOf', 'onlyAssociatedContract', None, None, None]]",1
+0x1be675c50c4cc419517219b88fe84a573cc223fa.sol,Synth,issue,role,synthetix,"[['FnHasMod', 'Proxy', '_emit', 'onlyTarget', None, None, None], ['FnHasMod', 'Synth', 'issue', 'onlyInternalContracts', None, None, None], ['FnHasMod', 'TokenState', 'setBalanceOf', 'onlyAssociatedContract', None, None, None]]",1
+0x1cbc36ad612b1f67c726e412e126b1e4ea613df1.sol,Tellor,depositStake,role,miners,[],0
+0x1d9e20e581a5468644fe74ccb6a46278ef377f9e.sol,CDRTToken,setBalances,role,owner,[],1
+0x40986a85b4cfcdb054a6cbfb1210194fee51af88.sol,UnifarmToken,_moveDelegates,require,"['GT', 'amount', '0']",[],0
+0x1f3e412b561c7a0e94ff819a95482eb94839caa4.sol,GToken,transferFrom,require,"['GT', 'recipient', 'amount']",[],1
+0x1f3e412b561c7a0e94ff819a95482eb94839caa4.sol,GToken,transferFrom,require,"['GT', 'sender', 'amount']",[],1
+0x1f6e6af195376fb39bb7fede37aa5fb28ac12b44.sol,RaindropClient,setMinimumHydroStakes,role,hydro api,[],1
+0x2072d16c15978a7050a93b62a315e1caa13c6c27.sol,TaskManager,_sendReward,event,proper,"[['Emit', 'TaskManager', '_sendReward', 'RewardSuccess', '$Bool(True)', None, None], ['Emit', 'TaskManager', '_sendReward', 'RewardFailure', '$Literal("""")', None, None], ['Emit', 'TaskManager', '_sendReward', 'RewardFailure', '$Bool(True)', None, None], ['Emit', 'TaskManager', 'doSendProfits', 'SendProfitsSuccess', '$Bool(True)', None, None]]",0
+0x20b41686e4c40c6b74e21edc455797d52bce4c61.sol,ERC1155OverERC20,safeTransferFrom,require,"['GEQ', 'from', 'amount']",[],1
+0x20b41686e4c40c6b74e21edc455797d52bce4c61.sol,ERC1155OverERC20,safeBatchTransferFrom,event,{transferbatch},[],1
+0x20b41686e4c40c6b74e21edc455797d52bce4c61.sol,ERC1155OverERC20,safeTransferFrom,event,{transfersingle},[],1
+0x218552baaad0d07a2ea2151741c5c604c057d8db.sol,MBDAManager,newFund,role,manager,[],0
+0xf2b0288e9759b30a76df9d490814df49d4164c6b.sol,QLCToken,destoryLock,require,"['GT', 'amount', '0']",[],0
+0x2293f8b4f0c68f83fa5217ac04fa71241d76d192.sol,BEP20Token,allowance,event,{transfer},[],1
+0x1f3e412b561c7a0e94ff819a95482eb94839caa4.sol,GToken,transferFrom,require,"['GT', 'amount', 'amount']",[],0
+0x230a9d329c5582b593919dccb1f828a24c239bd0.sol,BEP20Token,BurnThePool,event,{approval},[],1
+0x23684eda66652da77e817812bff0d375976de3e0.sol,Oracle,getStalePrices,role,admin,[],1
+0x23684eda66652da77e817812bff0d375976de3e0.sol,Oracle,addReader,role,reader,"[['FnHasMod', 'Oracle', 'addReader', 'onlyAdmin', None, None, None]]",0
+0x237887b20aa0da30d0ce2c5c0428976c0db57fb9.sol,NiftyBuilderInstance,setNiftyName,role,owner,"[['FnHasMod', 'NiftyBuilderInstance', 'setNiftyName', 'onlyValidSender', None, None, None]]",1
+0x23b3790f18c4c8986dfda1219aebd20eedf1af5e.sol,ERC20,_transfer,require,"['GEQ', 'sender', 'amount']",[],1
+0x23b3790f18c4c8986dfda1219aebd20eedf1af5e.sol,ERC20,transferFrom,require,"['GEQ', 'sender', 'amount']",[],1
+0xb706d79427e6aea5c2d1cab0fff215b26d37339b.sol,SmoothyV1,_logApprox,require,"['GT', 'x', '1e18']",[],1
+0x2401224012bae7c2f217392665ca7abc16dcde1e.sol,Formula,disable,role,governance,"[['FnHasMod', 'Formula', 'disable', 'auth', None, None, None]]",1
+0x2401224012bae7c2f217392665ca7abc16dcde1e.sol,Formula,insert,role,governance,"[['FnHasMod', 'Formula', 'insert', 'auth', None, None, None]]",1
+0x2401224012bae7c2f217392665ca7abc16dcde1e.sol,Formula,enable,role,governance,"[['FnHasMod', 'Formula', 'enable', 'auth', None, None, None]]",1
+0x24c3925b5b5f0cc9a8162500968dfd48f58a093f.sol,ProxyAdminRelayer,transferUpgrader,role,upgrader,"[['FnHasMod', 'ProxyAdminRelayer', 'transferUpgrader', 'onlyMultiSig', None, None, None]]",1
+0x347e9f48ba5c2f665734c034da60ed9fa264b04a.sol,MultivestToken,approveAndCall,require,"['LEQ', '_spender', 'value tokens']",[],0
+0x2c63af8a0aa3f22bbdd923d95c554fc6e745a525.sol,ERC1155,safeTransferFrom,require,"['GEQ', 'from', 'amount']",[],1
+0x2e20d07d0bd23add6d38dcdc35fdf24ab4485867.sol,ERC20,increaseAllowance,require,"['NEQ', 'spender', '0']",[],1
+0x2e20d07d0bd23add6d38dcdc35fdf24ab4485867.sol,ERC20,increaseAllowance,event,{approval},[],1
+0xd27fc78c63914120aa47653882bd77eb94109174.sol,DEADToken,approve,require,"['LEQ', '_spender', 'value tokens']",[],0
+0x9987929b22a8674ce818190dc869f99a2b400762.sol,GovernanceToken,approveAndCall,require,"['LEQ', '_spender', 'value']",[],0
+0x30f3581ef6469334c8752d9b6ca3fb39c72f57f1.sol,Keep3r,claim,role,keepers,[],1
+0x32d0b9534f656c71d02505687fcb39336ffce5e3.sol,BINGSU,_transfer,event,{transfer},[],1
+0xe9e03497fbf8f9463b2124fe2c8ceb8c3c92d8cd.sol,TokenERC20,approveAndCall,require,"['LEQ', '_spender', 'value']",[],0
+0xe9e03497fbf8f9463b2124fe2c8ceb8c3c92d8cd.sol,TokenERC20,approve,require,"['LEQ', '_spender', 'value']",[],0
+0x36f928796f8ac12cc11834499e145d9772883044.sol,BetokenFund,voteOnCandidate,role,manager,[],1
+0x36f928796f8ac12cc11834499e145d9772883044.sol,BetokenFund,proposeCandidate,role,manager,[],1
+0x36f928796f8ac12cc11834499e145d9772883044.sol,BetokenFund,listKyberToken,role,managers,"[['FnHasMod', 'BetokenFund', 'listKyberToken', 'onlyOwner', None, None, None]]",1
+0x21bceeef718a0928c2cc1f1d980bab5993f837ba.sol,Custodial,mul,require,"['LT', '_a', 'to2']",[],0
+0x386ee3ec211659a01042c47eaa2cc5b91ca05fa4.sol,RtistiqCore,transferFrom,require,"['NEQ', 'from', '0']","[['Require', 'RtistiqCore', '_transfer', ""['NEQ', 'to', 'address(0)']"", 'ERC721: transfer to the zero address', None, None]]",1
+0x386ee3ec211659a01042c47eaa2cc5b91ca05fa4.sol,RtistiqToken,setApprovalForAll,event,{approvalforall},[],1
+0x38b27df57d2c1b92bd88b582bbe88816354a7f62.sol,ERC20,_transfer,require,"['NEQ', 'sender', '0']","[['Require', 'ERC20', '_transfer', ""['NEQ', 'recipient', 'address(0)']"", 'None', None, None], ['Require', 'SafeMath', 'div', ""['GT', 'b', '0']"", 'errorMessage', None, None]]",1
+0x38ed1449e0b5e1bdd018cec8a45159dd2140613a.sol,ERC20,burn,require,"['NEQ', 'account', '0']","[['Require', 'ERC20', 'burn', ""['GEQ', 'accountBalance', 'amount']"", 'ERC20: burn amount exceeds balance', None, None]]",1
+0x8710e1a2d187f7c7259699642d77ea7aad97be76.sol,Auctions,skipInitBecauseIAmNotOg,require,"['LT', '_minimumPrice', 'price']",[],0
+0x3aacd706d3ed1fbdffdb5f4ce0d25574f029d9ae.sol,Oracle,withdraw,role,node operator,"[['FnHasMod', 'Oracle', 'withdraw', 'onlyOwner', None, None, None]]",1
+0x3bed0991eafe3361ae2c2420eac8dba0578d5279.sol,ERC20,convertTokenWithTransfer,require,"['NEQ', 'account', '0']","[['Require', 'ERC20', '_transfer', ""['NEQ', 'depositAddress', 'address(0)']"", 'ERC20: transfer to the zero address', None, None], ['Require', 'ERC20', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: transfer from the zero address', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'errorMessage', None, None], ['Require', 'SafeMath', 'add', ""['GEQ', 'c', 'a']"", 'SafeMath: addition overflow', None, None]]",1
+0x3c68dfc45dc92c9c605d92b49858073e10b857a6.sol,Spender,spendFromUser,role,authority,"[['FnHasMod', 'Spender', 'spendFromUser', 'onlyAuthorized', None, None, None]]",0
+0x3cf1cf6969c5839da54b19734ebfa5b9bb9e67a7.sol,TokenERC,transferFrom,event,{approval},"[['Emit', 'TokenERC', '_transfer', 'Transfer', '$Bool(True)', None, None]]",1
+0x3cf4726925436a0f9d2b0aeaf6c5a1546a2749ab.sol,ERC20,transferFrom,require,"['NEQ', 'recipient', '0']","[['Require', 'ERC20', '_approve', ""['NEQ', 'spender', 'address(0)']"", 'ERC20: approve to the zero address', None, None], ['Require', 'ERC20', '_approve', ""['NEQ', 'from', 'address(0)']"", 'ERC20: approve from the zero address', None, None], ['Require', 'ERC20', '_transfer', ""['NEQ', 'to', 'address(0)']"", 'ERC20: transfer to the zero address', None, None], ['Require', 'ERC20', '_transfer', ""['NEQ', 'from', 'address(0)']"", 'ERC20: transfer from the zero address', None, None]]",1
+0x3cf4726925436a0f9d2b0aeaf6c5a1546a2749ab.sol,ERC20,transfer,require,"['NEQ', 'recipient', '0']","[['Require', 'ERC20', '_transfer', ""['NEQ', 'to', 'address(0)']"", 'ERC20: transfer to the zero address', None, None], ['Require', 'ERC20', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: transfer from the zero address', None, None]]",1
+0x3d277e106fc867cf845000f11aff9f9785e20c1e.sol,PermissionControll,setIssuer,role,issuer,"[['FnHasMod', 'PermissionControll', 'setIssuer', 'onlyAdmin', None, None, None]]",1
+0x3d7f0933ac403773d219cf0519de8082946dc10f.sol,fUSD,_burn,require,"['GEQ', 'account', 'amount tokens']",[],1
+0x3d7f0933ac403773d219cf0519de8082946dc10f.sol,fUSD,permit,require,"['NEQ', 'owner', '0']",[],1
+0x3d7f0933ac403773d219cf0519de8082946dc10f.sol,fUSD,permit,require,"['NEQ', 'spender', '0']",[],1
+0x3e34556b7d6a6c79320168140e14c10d7a1febb7.sol,NiftyBuilderInstance,setNiftyName,role,owner,"[['FnHasMod', 'NiftyBuilderInstance', 'setNiftyName', 'onlyValidSender', None, None, None]]",1
+0x3f53a2f6c5a0c34c70856b529d0a0a10cd6bf407.sol,ERC20,Government,event,{approval},[],1
+0x3fdf56e55750b567c4f382ff553351549a06142e.sol,NonFungibleToken,safeTransferFrom,require,"['NEQ', 'from', '0']","[['Require', 'EnumerableMap', '_get', ""['NEQ', 'keyIndex', '0']"", 'errorMessage', None, None]]",1
+0x3fdf56e55750b567c4f382ff553351549a06142e.sol,NonFungibleToken,safeTransferFrom,require,"['NEQ', 'to', '0']","[['Require', 'EnumerableMap', '_get', ""['NEQ', 'keyIndex', '0']"", 'errorMessage', None, None]]",1
+0x3fdf56e55750b567c4f382ff553351549a06142e.sol,ERC721,safeTransferFrom,event,{transfer},[],1
+0x3fe15e14187074f21dc5d354cb70695de014a562.sol,GravisCollectible,safeTransferFrom,require,"['NEQ', 'from', '0']","[['Require', 'GravisCollectible', '_transfer', ""['NEQ', '_to', 'address(0)']"", 'ERC721: transfer to the zero address', None, None]]",1
+0x3fe15e14187074f21dc5d354cb70695de014a562.sol,GravisCollectible,transferFrom,require,"['NEQ', 'from', '0']","[['Require', 'GravisCollectible', '_transfer', ""['NEQ', '_to', 'address(0)']"", 'ERC721: transfer to the zero address', None, None]]",1
+0x8710e1a2d187f7c7259699642d77ea7aad97be76.sol,Auctions,initAuctions,require,"['LT', '_minimumPrice', 'price']",[],0
+0x23dcf6976cdd444572a401d3cf10d9690ac9165c.sol,StakePoolSimpleCombined,claimReward,require,"['LT', 'amount', 'reward']",[],1
+0x410dc1f0a7d47646a980043c14d37c1d8484778b.sol,ADeflationaryProject,approve,role,owner,[],1
+0x410dc1f0a7d47646a980043c14d37c1d8484778b.sol,ERC20Detailed,name,event,{transfer},[],1
+0x410dc1f0a7d47646a980043c14d37c1d8484778b.sol,ERC20Detailed,constructor,event,{transfer},[],1
+0x410dc1f0a7d47646a980043c14d37c1d8484778b.sol,ERC20Detailed,decimals,event,{transfer},[],1
+0x410dc1f0a7d47646a980043c14d37c1d8484778b.sol,ERC20Detailed,symbol,event,{transfer},[],1
+0x419aa1b768d1476305574a3cb61b7acbf6bd4308.sol,UsingRegistry,constructor,event,appropriate,"[['Emit', 'UsingRegistry', 'constructor', 'RegistrySet', '$Bool(True)', None, None]]",0
+0x4251139bf01d46884c95b27666c9e317df68b876.sol,Etheraffle,manuallyMakeOraclizeCall,role,recursiveness,"[['FnHasMod', 'Etheraffle', 'manuallyMakeOraclizeCall', 'onlyEtheraffle', None, None, None]]",0
+0x4434af2262d1868261cbda45352f611c8116b9f4.sol,Controllable,transferControl,role,owner,"[['FnHasMod', 'Controllable', 'transferControl', 'onlyController', None, None, None]]",1
+0x45c58bbd535b8661110ef5296e6987573d0c8276.sol,Etheraffle,manuallyMakeOraclizeCall,role,recursiveness,"[['FnHasMod', 'Etheraffle', 'manuallyMakeOraclizeCall', 'onlyEtheraffle', None, None, None]]",0
+0x465390923ddcef795a0f364a890a6ab3a5be6fd3.sol,MyPetPro,removeTimeLock,role,locker,"[['FnHasMod', 'MyPetPro', 'removeTimeLock', 'onlyOwner', None, None, None], ['FnHasMod', 'MyPetPro', 'removeTimeLock', 'whenNotPaused', None, None, None]]",1
+0x465390923ddcef795a0f364a890a6ab3a5be6fd3.sol,MyPetPro,unlock,role,locker,"[['FnHasMod', 'MyPetPro', 'unlock', 'onlyOwner', None, None, None], ['FnHasMod', 'MyPetPro', 'unlock', 'whenNotPaused', None, None, None]]",1
+0x465390923ddcef795a0f364a890a6ab3a5be6fd3.sol,MyPetPro,removeInvestorLock,role,locker,"[['FnHasMod', 'MyPetPro', 'removeInvestorLock', 'onlyOwner', None, None, None], ['FnHasMod', 'MyPetPro', 'removeInvestorLock', 'whenNotPaused', None, None, None]]",1
+0x4681d7ba484a679d10f68d7f6f0e1222e93b5779.sol,CouponClipper,withdraw,role,house,[],0
+0x48470fb3fe7108b9e15b2bf7aa15b7adf774d721.sol,SateNFT,_setPrimarySalePrice,role,admin,"[['FnHasMod', 'SateNFT', 'setPrimarySalePrice', 'onlyAuction', None, None, None]]",1
+0x48470fb3fe7108b9e15b2bf7aa15b7adf774d721.sol,SateNFT,setPrimarySalePrice,role,admin,"[['FnHasMod', 'SateNFT', 'setPrimarySalePrice', 'onlyAuction', None, None, None]]",1
+0x48470fb3fe7108b9e15b2bf7aa15b7adf774d721.sol,SateNFT,batchSetPrimarySalePrice,role,admin,"[['FnHasMod', 'SateNFT', 'batchSetPrimarySalePrice', 'onlyGovernance', None, None, None]]",1
+0x48470fb3fe7108b9e15b2bf7aa15b7adf774d721.sol,SateNFT,burn,role,owner,[],0
+0x49271893303584cfab9b5f5677108b50694133bb.sol,ERC20,open,event,{approval},[],1
+0x49271893303584cfab9b5f5677108b50694133bb.sol,ERC20,open,event,{transfer},[],1
+0x49edf201c1e139282643d5e7c6fb0c7219ad1db7.sol,ICO,setAllStopper,role,allstopper,"[['FnHasMod', 'ICO', 'setAllStopper', 'onlyOwner', None, None, None]]",0
+0x4c6997d462b0146fa54b747065411c1ba0248595.sol,ERC20,transferFrom,require,"['GEQ', 'sender', 'amount']",[],1
+0x4cf117aaa757dad4a084025c3f23f1b67a037049.sol,GrantsDAOV2,reassignGrant,event,InitiativeAssigned,"[['Emit', 'GrantsDAOV2', 'reassignGrant', 'GrantReassigned', '$Bool(True)', None, None]]",1
+0x4d2deb6b1860c5a5a64dcc6ab8de77b215d87db6.sol,TokenBEP20,allowance,require,"['NEQ', 'spender', '0']",[],1
+0x4d2deb6b1860c5a5a64dcc6ab8de77b215d87db6.sol,TokenBEP20,approveAndCall,require,"['NEQ', 'spender', '0']",[],1
+0x4de395f25836af345599d7244ed468ec46463f12.sol,ERC20,burn,event,{transfer},[],1
+0x4f5704d9d2cbccaf11e70b34048d41a0d572993f.sol,WETH10,permit,require,"['NEQ', 'owner', '0']",[],1
+0x4f7f56d57607e346ff8719c9f34cba3bbccae71f.sol,CelerLedger,intendWithdraw,role,peers,[],1
+0x4fce5178346fc58a0a1261ec2306acc39ed801ab.sol,HubCulture,isRegistered,role,registration state,[],0
+0x4ff0170a2bf39368681109034a2f7d505f181544.sol,Keep3r,deactivate,role,keeper,[],0
+0x5187c177256ba82660e0a78b69c40e4e4408675d.sol,StakedToken,blackListWrapper,role,governance,"[['FnHasMod', 'StakedToken', 'blackListWrapper', 'onlyGovernor', None, None, None]]",1
+0x5187c177256ba82660e0a78b69c40e4e4408675d.sol,StakedToken,whitelistWrapper,role,governance,"[['FnHasMod', 'StakedToken', 'whitelistWrapper', 'onlyGovernor', None, None, None]]",1
+0x51f40a6bc28b50b714d4a60f9d78660cb5bfb68e.sol,Whitelisted,addToWhitelist,role,admins,[],1
+0x51f40a6bc28b50b714d4a60f9d78660cb5bfb68e.sol,NAdmin,addToAdmins,role,admins,[],1
+0x540449e4d172cd9491c76320440cd74933d5691a.sol,DecentBetToken,addToCommunitySaleWhitelist,role,owner,"[['FnHasMod', 'DecentBetToken', 'addToCommunitySaleWhitelist', 'onlyTeam', None, None, None]]",1
+0x540449e4d172cd9491c76320440cd74933d5691a.sol,DecentBetToken,addToPreSaleWhitelist,role,owner,"[['FnHasMod', 'DecentBetToken', 'addToPreSaleWhitelist', 'onlyTeam', None, None, None]]",1
+0x5467e9b502bc44d99d84543e288c4e340baf3064.sol,ERC20,_approve,require,"['NEQ', 'owner', '0']",[],1
+0x5467e9b502bc44d99d84543e288c4e340baf3064.sol,ERC20,transferFrom,require,"['NEQ', 'recipient', '0']","[['Require', 'ERC20', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'None', None, None]]",1
+0x5467e9b502bc44d99d84543e288c4e340baf3064.sol,ERC20,transfer,require,"['NEQ', 'recipient', '0']","[['Require', 'ERC20', '_transfer', ""['NEQ', 'msg.sender', 'address(0)']"", 'None', None, None]]",1
+0x5467e9b502bc44d99d84543e288c4e340baf3064.sol,ERC20,_transfer,require,"['NEQ', 'recipient', '0']","[['Require', 'ERC20', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'None', None, None]]",1
+0x5467e9b502bc44d99d84543e288c4e340baf3064.sol,ERC20,increaseAllowance,require,"['NEQ', 'spender', '0']",[],1
+0x5467e9b502bc44d99d84543e288c4e340baf3064.sol,ERC20,_approve,require,"['NEQ', 'spender', '0']",[],1
+0x5467e9b502bc44d99d84543e288c4e340baf3064.sol,ERC20,decreaseAllowance,require,"['NEQ', 'spender', '0']",[],1
+0x5496fa28a401fa46a8da9deb9bad2531c4244939.sol,DeCashToken,changeRequiredSigners,role,owners,"[['FnHasMod', 'DeCashToken', 'changeRequiredSigners', 'onlyLastest', None, None, None], ['FnHasMod', 'DeCashToken', 'changeRequiredSigners', 'onlySuperUser', None, None, None]]",1
+0x555eedd21fbef9789ad25a531e342df0d020d98d.sol,InvestyPresale,authorizedCreateTokens,role,acces,"[['FnHasMod', 'InvestyToken', 'mint', 'onlyOwner', None, None, None], ['FnHasMod', 'InvestyPresale', 'authorizedCreateTokens', 'onlyAuthorized', None, None, None]]",0
+0x55bbab8bbefc49996507b84cccb92c74a0c2be3f.sol,ItemInteroperableInterface,permit,require,"['NEQ', 'spender', '0']",[],1
+0x565b5f1c41e9b15731fb5a64ee6cfa2ffd2062c5.sol,ERC20,_transfer,require,"['NEQ', 'recipient', '0']",[],1
+0x565b5f1c41e9b15731fb5a64ee6cfa2ffd2062c5.sol,ERC20,_transfer,require,"['NEQ', 'sender', '0']",[],1
+0x56ba2ee7890461f463f7be02aac3099f6d5811a8.sol,CATToken,withdrawFunds,role,blockcat,[],1
+0x5882d49d3511e09096cbbab7e19fbfb82f65f28d.sol,BioToken,getNoContributors,role,owner,[],1
+0x59bbe8cfc79c76857fe0ec27e67e4957370d72b5.sol,PreCoordinator,oracleRequest,event,OracleRequest,"[['Emit', 'PreCoordinator', 'createRequests', 'ServiceAgreementRequested', '$Bool(True)', None, None], ['Emit', 'PreCoordinator', 'sendChainlinkRequestTo', 'ChainlinkRequested', '$Bool(True)', None, None]]",1
+0x59bbe8cfc79c76857fe0ec27e67e4957370d72b5.sol,PreCoordinator,createServiceAgreement,role,owner,[],1
+0x5a0e27020fa22adab2e81495025bef3fab7821fd.sol,QuantstampAudit,setAuditNodePrice,role,audit node,"[['FnHasMod', 'QuantstampAuditData', 'setMinAuditPrice', 'onlyWhitelisted', None, None, None]]",1
+0x5c0b9d76e8e985b58ffbf08c040f2f270baf78d6.sol,UserRegistry,unverifyKycDisableRedeem,event,{v},"[['Emit', 'UserRegistry', 'setAttribute', 'SetAttribute', '$Bool(True)', None, None], ['Emit', 'UserRegistry', 'unverifyKycDisableRedeem', 'DisableRedeemAddress', '$Bool(True)', None, None], ['Emit', 'UserRegistry', 'unverifyKycDisableRedeem', 'UserKycUnverified', '$Bool(True)', None, None]]",1
+0x5c8951c94b059900d05b10d592b44c78574196c5.sol,EtherCityToken,setCOO,role,coo,"[['FnHasMod', 'EtherCityToken', 'setCOO', 'onlyCEO', None, None, None]]",1
+0x5eeaa2dcb23056f4e8654a349e57ebe5e76b5e6e.sol,Sale,transferAllowed,role,sale,[],0
+0x600131c7c895d480a92ba30b441394950f2b07c3.sol,AssetWithCompliance,setupComplianceConfiguration,role,dmin,"[['FnHasMod', 'AssetWithCompliance', 'setupComplianceConfiguration', 'onlyRole', None, None, None]]",0
+0x618b1f3f8b5e9afd83bbba95a1fde68837600459.sol,Ownable,transferOwnership,role,owner,"[['FnHasMod', 'Ownable', 'transferOwnership', 'onlyCreator', None, None, None]]",1
+0x638411bd8358289ed00f7dcd8972f8749db59d5d.sol,ERC20,decreaseAllowance,event,{approval},"[['Emit', 'ERC20', '_mint', 'Transfer', '$Bool(True)', None, None]]",1
+0x6588e9840b4a1c7f0fcc6a3efd3a4fcdfa419d30.sol,Blacklisted,addToBlacklist,role,admins,[],1
+0x6588e9840b4a1c7f0fcc6a3efd3a4fcdfa419d30.sol,NAutoblock,addToAutoblockers,role,autoblockers,[],1
+0x665ac6fc5a6041815c97e53376cd925825347bf0.sol,ParassetERC20,_transfer,require,"['NEQ', 'recipient', '0']","[['Require', 'ParassetERC20', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: transfer from the zero address', None, None]]",1
+0x665ac6fc5a6041815c97e53376cd925825347bf0.sol,InsurancePool,_transfer,require,"['NEQ', 'recipient', '0']","[['Require', 'InsurancePool', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: transfer from the zero address', None, None]]",1
+0x66db1cb53e91e9fd523e8c88cc5ae95fc81389b7.sol,MovecoinCertificationAuthority,issueNewCertificate,role,movecoincertificationauthority,"[['FnHasMod', 'MovecoinCertificationAuthority', 'issueNewCertificate', 'onlymanager', None, None, None]]",1
+0x67023c56548ba15ad3542e65493311f19adfdd6d.sol,InitializeGovernedUpgradeabilityProxy,upgradeTo,role,admin,"[['FnHasMod', 'InitializeGovernedUpgradeabilityProxy', 'upgradeTo', 'onlyGovernor', None, None, None]]",1
+0x672d85e6c31eacd3a15b635a27679038c35c8749.sol,MarketboardERC20Listing,buyback,role,creator,"[['FnHasMod', 'MarketboardERC20Listing', 'buyback', 'moderatorOrSellerOnly', None, None, None]]",0
+0x6824822886c5c7e09451249e700980fb4cac256f.sol,Mask,decreaseAllowance,event,{approval},[],1
+0x6824822886c5c7e09451249e700980fb4cac256f.sol,Mask,transferFrom,event,{approval},[],1
+0x6824822886c5c7e09451249e700980fb4cac256f.sol,Mask,_approve,event,{approval},[],1
+0x6824822886c5c7e09451249e700980fb4cac256f.sol,Mask,increaseAllowance,event,{approval},[],1
+0x6824822886c5c7e09451249e700980fb4cac256f.sol,Mask,transfer,event,{transfer},[],1
+0x6824822886c5c7e09451249e700980fb4cac256f.sol,Mask,_transfer,event,{transfer},[],1
+0x6824822886c5c7e09451249e700980fb4cac256f.sol,Mask,transferFrom,event,{transfer},[],1
+0x68a613409448e342ce3aad0fc390ca5cc0b45f75.sol,HiIQRewards,eligibleCurrentHiIQ,role,positions,[],0
+0x6ac1df9de8602db25a6378b6a89175de62b402fa.sol,AirdropTestToken,transferFrom,require,"['GEQ', 'sender_', 'amount']",[],1
+0x6c7bbd8b6c32512dd36d8eecdb3ed4429eb8a85d.sol,GeneNuggetsToken,setExchangeThreshold,role,owner,"[['FnHasMod', 'GeneNuggetsToken', 'setExchangeThreshold', 'onlyCFO', None, None, None]]",1
+0x6c7bbd8b6c32512dd36d8eecdb3ed4429eb8a85d.sol,GeneNuggetsToken,setDestroyThreshold,role,owner,"[['FnHasMod', 'GeneNuggetsToken', 'setDestroyThreshold', 'onlyCFO', None, None, None]]",1
+0x6c7bbd8b6c32512dd36d8eecdb3ed4429eb8a85d.sol,GeneNuggetsToken,setExchangeLimit,role,owner,"[['FnHasMod', 'GeneNuggetsToken', 'setExchangeLimit', 'onlyCFO', None, None, None]]",1
+0x6c7bbd8b6c32512dd36d8eecdb3ed4429eb8a85d.sol,GeneNuggetsToken,setExchangeInterval,role,owner,"[['FnHasMod', 'GeneNuggetsToken', 'setExchangeInterval', 'onlyCFO', None, None, None]]",1
+0x6da7d857ceecedf2c31716997795f2ad0db43019.sol,ProxyAdmin,getProxyImplementation,role,proxy admin,[],1
+0x716525973aa2f59a6bb80b001f089da754b2c3be.sol,Lottery,host_claim_earnings,role,hosts,[],1
+0x717b45c606f5114c62344136e6f1ac41d50d07e0.sol,HydraToken,_burn,require,"['NEQ', 'account', '0']","[['Require', 'SafeMath', 'sub', ""['LEQ', 'amount', 'a']"", 'errorMessage', None, None]]",1
+0x722f2f3eac7e9597c73a593f7cf3de33fbfc3308.sol,CnusToken,lockAddress,role,issuer,"[['FnHasMod', 'CnusToken', 'lockAddress', 'onlyOwner', None, None, None]]",1
+0x722f2f3eac7e9597c73a593f7cf3de33fbfc3308.sol,CnusToken,unlockAddress,role,issuer,"[['FnHasMod', 'CnusToken', 'unlockAddress', 'onlyOwner', None, None, None]]",1
+0x7287bef78619e10c32a1eee82046fa3c4a29f17d.sol,CryptoPornSmartContract,setCOO,role,coo,"[['FnHasMod', 'CryptoPornSmartContract', 'setCOO', 'onlyCEO', None, None, None]]",1
+0x7367a68039d4704f30bfbf6d948020c3b07dfc59.sol,MasteredBeercoin,allowDirectDebit,role,master,[],1
+0x4014aabaed9923818899af6ae5546aeb254d9fe6.sol,PlayChip,transferFrom,require,"['LT', 'from', 'transfer quantity']",[],0
+0x7598c3543ef4f27f09c98aeb3753506a0290a0fc.sol,tmed,setNumRewardsAvailableForAddress,role,devs,[],0
+0x7604404d4e92eb55fc8504d722e425fb0a3541d9.sol,ERC20,_transfer,require,"['NEQ', 'recipient', '0']","[['Require', 'ERC20', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: transfer from the zero address', None, None]]",1
+0x77784872e80d91dc4916e1df27da64a69b11296b.sol,MainSale,authorizedBurnTokens,role,acces,"[['FnHasMod', 'CBCToken', 'burn', 'onlyOwner', None, None, None], ['FnHasMod', 'MainSale', 'authorizedBurnTokens', 'onlyAuthorized', None, None, None]]",0
+0x77784872e80d91dc4916e1df27da64a69b11296b.sol,MainSale,authorizedCreateTokens,role,acces,"[['FnHasMod', 'MainSale', 'authorizedCreateTokens', 'onlyAuthorized', None, None, None], ['FnHasMod', 'CBCToken', 'mint', 'onlyOwner', None, None, None]]",0
+0x77d8a32e0f37c8d6413bbeb5c601efcb018be996.sol,NRB_Main,_realBalanceOnEther,role,owner,[],1
+0x788f328843a185b1b484e72adefbab6c8aee95af.sol,WrappedERC721,transferFrom,require,"['NEQ', 'from', '0']",[],1
+0x788f328843a185b1b484e72adefbab6c8aee95af.sol,WrappedERC721,safeTransferFrom,require,"['NEQ', 'from', '0']",[],1
+0x788f328843a185b1b484e72adefbab6c8aee95af.sol,WrappedERC721,setApprovalForAll,require,"['NEQ', 'operator', 'caller']",[],1
+0x788f328843a185b1b484e72adefbab6c8aee95af.sol,WrappedERC721,safeTransferFrom,require,"['NEQ', 'to', '0']",[],1
+0x788f328843a185b1b484e72adefbab6c8aee95af.sol,WrappedERC721,transferFrom,require,"['NEQ', 'to', '0']",[],1
+0x788f328843a185b1b484e72adefbab6c8aee95af.sol,WrappedERC721,approve,event,{approval},[],1
+0x788f328843a185b1b484e72adefbab6c8aee95af.sol,WrappedERC721,transferFrom,event,{transfer},[],1
+0x788f328843a185b1b484e72adefbab6c8aee95af.sol,WrappedERC721,safeTransferFrom,event,{transfer},[],1
+0x78a73b6cbc5d183ce56e786f6e905cadec63547b.sol,FabricTokenSafe,releaseAdvisorsAccount,role,advisors,[],0
+0x78a73b6cbc5d183ce56e786f6e905cadec63547b.sol,FabricTokenSafe,releaseCoreTeamAccount,role,core team,[],0
+0x79040c7783d2853c069ddf8725391e975b41ad16.sol,yComplex,mint,require,"['NEQ', 'to', '0']","[['Require', 'yComplex', 'balanceOf', ""['NEQ', 'owner', 'address(0)']"", 'ERC721: balance query for the zero address', None, None], ['Require', 'yComplex', '_mint', ""['NEQ', 'msg.sender', 'address(0)']"", 'ERC721: mint to the zero address', None, None], ['Require', 'yComplex', 'mint', ""['LT', 'ADD', '_tokenIdTracker.current()', '_count', 'ADD', 'MAX_TOKENS', '1']"", 'Not enough yComplex NFTs left.', None, None]]",1
+0x7a1abe293da84eb5e06a8074039a9bba575ba631.sol,ERC20,_transfer,require,"['GEQ', 'sender', 'amount']",[],1
+0x7aac67b8cb7f39e080672ca6a32f5a6a964c26a4.sol,Blacklistable,removeFromBlacklist,role,admins,"[['FnHasMod', 'Blacklistable', 'removeFromBlacklist', 'onlyBlacklister', None, None, None]]",1
+0x7aac67b8cb7f39e080672ca6a32f5a6a964c26a4.sol,RevocableToAddress,revokeToAddress,role,admins,"[['FnHasMod', 'RevocableToAddress', 'revokeToAddress', 'onlyRevoker', None, None, None]]",1
+0x7aac67b8cb7f39e080672ca6a32f5a6a964c26a4.sol,Whitelistable,addToWhitelist,role,admins,"[['FnHasMod', 'Whitelistable', 'addToWhitelist', 'onlyWhitelister', None, None, None]]",1
+0x7aac67b8cb7f39e080672ca6a32f5a6a964c26a4.sol,Revocable,revoke,role,admins,"[['FnHasMod', 'Revocable', 'revoke', 'onlyRevoker', None, None, None]]",1
+0x7aac67b8cb7f39e080672ca6a32f5a6a964c26a4.sol,Whitelistable,updateOutboundWhitelistEnabled,role,admins,"[['FnHasMod', 'Whitelistable', 'updateOutboundWhitelistEnabled', 'onlyWhitelister', None, None, None]]",1
+0x7aac67b8cb7f39e080672ca6a32f5a6a964c26a4.sol,Whitelistable,removeFromWhitelist,role,admins,"[['FnHasMod', 'Whitelistable', 'removeFromWhitelist', 'onlyWhitelister', None, None, None]]",1
+0x7aac67b8cb7f39e080672ca6a32f5a6a964c26a4.sol,Mintable,mint,role,owners,"[['FnHasMod', 'Mintable', 'mint', 'onlyMinter', None, None, None]]",1
+0xc234c62c8c09687dff0d9047e40042cd166f3600.sol,MapleGlobals,_checkPercentageRange,require,"['LT', 'percentage', '100']",[],0
+0x07ceec5d39bb14867b36d723d1a680c1899eaf94.sol,StarNFTV1,balanceOf,require,"['NEQ', 'account', '0']",[],0
+0x80ab141f324c3d6f2b18b030f1c4e95d4d658778.sol,ERC20,transferFrom,event,{transfer},"[['Emit', 'ERC20', '_approve', 'Approval', '$Bool(True)', None, None]]",1
+0x80ab141f324c3d6f2b18b030f1c4e95d4d658778.sol,ERC20,_transfer,event,{transfer},[],1
+0x8189b58a9deba68b2753c66e383afaf33759c145.sol,ERC20StakableDiscreetly,withdrawReward,event,{stake},"[['Emit', 'ERC20StakableDiscreetly', '_mint', 'Transfer', '$Bool(True)', None, None]]",1
+0x83a7c04218decca5a2290c9a65d9e39e58aeeeb0.sol,Governance,voteFor,role,voter,[],1
+0x83a7c04218decca5a2290c9a65d9e39e58aeeeb0.sol,Governance,voteAgainst,role,voter,[],1
+0x2b5f952b49505d0ab3b22fb62dc912ff91c6e166.sol,FourArtNFT,mint,require,"['NEQ', 'account', '0']","[['Require', 'FourArtNFT', 'mint', ""['NEQ', 'to', 'address(0)']"", 'ERC1155: mint to the zero address', None, None], ['Require', 'FourArtNFT', '_mint', ""['NEQ', 'to', 'address(0)']"", 'ERC1155: mint to the zero address', None, None]]",0
+0x3758e00b100876c854636ef8db61988931bb8025.sol,UniqToken,_burn,require,"['NEQ', 'account', '0']","[['Require', 'UniqToken', '_burn', ""['GEQ', 'balances[account]', 'amount']"", 'ERC20: burn amount exceeds balance', None, None]]",0
+0x739a39f4808ceefed77d97fda8eb163547f42c84.sol,NymToken,burn,require,"['NEQ', 'account', '0']","[['Require', 'NymToken', '_burn', ""['NEQ', 'msg.sender', 'address(0)']"", 'ERC20: burn from the zero address', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'errorMessage', None, None]]",0
+0x871ae94d2375f7a0d2fa584d0201c67ed2d35103.sol,DigiPulse,withdrawFundsToOwner,role,owner,[],0
+0x890b7a31a0452daea7b233ca2b0a2e6b268cb8c3.sol,ERC1155PresetMinterPauser,mint,require,"['NEQ', 'account', '0']","[['Require', 'ERC1155PresetMinterPauser', '_mint', ""['NEQ', 'to', 'address(0)']"", 'ERC1155: mint to the zero address', None, None], ['Require', 'SafeMath', 'add', ""['GEQ', 'c', 'a']"", 'SafeMath: addition overflow', None, None]]",1
+0x8a42d311d282bfcaa5133b2de0a8bcdbecea3073.sol,AllowanceTarget,executeCall,role,authority,"[['FnHasMod', 'AllowanceTarget', 'executeCall', 'onlySpender', None, None, None]]",0
+0x8dcaa7d3a38073565abb2501135584af2c689ae6.sol,AllMarkets,withdrawSponsoredIncentives,role,incentive sponsorer,[],1
+0x8e52fd6f49066caafcaab5bf02f5be645399f354.sol,HorseyPilot,withdrawCeo,role,ceo,"[['FnHasMod', 'HorseyPilot', 'withdrawCeo', 'onlyCLevelAccess', None, None, None]]",1
+0x8e58424865d52d88dc8dde904876dc3864ad04ac.sol,BetokenFund,developerInitiateUpgrade,role,developer,"[['FnHasMod', 'BetokenFund', 'developerInitiateUpgrade', 'onlyOwner', None, None, None]]",1
+0x8fee3b29307586fbd2dd661641a91bf7d6ea9d9c.sol,TokenERC20,batchTransfer,role,owner,[],1
+0x915a22a152654714fceca3f4704fcf6bd314624c.sol,ItemMainInterface,balanceOfBatch,require,"['EQ', 'accounts.length', 'ids.length']",[],1
+0x915a22a152654714fceca3f4704fcf6bd314624c.sol,ItemMainInterface,safeBatchTransferFrom,require,"['EQ', 'ids.length', 'amounts.length']","[['Require', 'ItemMainInterface', '_mintTransferOrBurn', ""['GEQ', 'itemData.balanceOf[sender]', 'amount']"", 'amount exceeds balance', None, None]]",1
+0x915a22a152654714fceca3f4704fcf6bd314624c.sol,ItemMainInterface,balanceOf,require,"['NEQ', 'account', '0']",[],1
+0xa39a80a469aba6eda6d1b082fe6fd63539d7a050.sol,BOSS,burn,require,"['NEQ', 'account', '0']","[['Require', 'BOSS', 'burn', ""['EQ', 'account', '_msgSender()']"", 'Ownable: caller is not the owner', None, None], ['Require', 'BOSS', 'burn', ""['NEQ', '_msgSender()', 'address(0)']"", 'ERC20: cannot permit zero address', None, None], ['Require', 'SafeMath', 'add', ""['GEQ', 'c', 'a']"", 'SafeMath: addition overflow', None, None]]",0
+0xd409bb122cc1cdaa5c1530f1e7ff1512345477b9.sol,ERC20,burn,require,"['NEQ', 'account', '0']","[['Require', 'ERC20', 'burn', ""['EQ', 'account', '_owner']"", 'ERC20: Only burn from the zero address', None, None], ['Require', 'ERC20', 'burn', ""['GEQ', 'accountBalance', 'amount']"", 'ERC20: burn amount exceeds balance', None, None]]",0
+0x916c729002c041972c640390a0fad1db29b6a6c2.sol,Whitelist,activateWallets,role,owner,"[['FnHasMod', 'Whitelist', 'activateWallets', 'onlyOperator', None, None, None]]",1
+0x91afe89b4c0d2bbd19072372227c8f7d3ef0cec9.sol,TokenContract,burnn2,event,{approval},[],1
+0x91afe89b4c0d2bbd19072372227c8f7d3ef0cec9.sol,TokenContract,burnn,event,{approval},[],1
+0x93ae58cc1d029bbdf8b53a89337f4abb63f6d588.sol,StopLimitOrders,getTradeCost,role,traders,"[['FnHasMod', 'StopLimitOrders', 'getTradeCost', 'onlySolo', None, None, None]]",1
+0x940c33cf45ec52aa3e8d9e58af01437131e2fa1e.sol,OptionsProxy,setCollateralPhase,role,foundation operator,[],1
+0x940c33cf45ec52aa3e8d9e58af01437131e2fa1e.sol,OptionsProxy,setOccupiedCollateral,role,foundation operator,[],1
+0x9540cc6c10b210e6214aec8b88a7b0b30e077745.sol,Shibakemon,increaseAllowance,event,{approval},"[['Emit', 'Shibakemon', '_mint', 'Transfer', '$Bool(True)', None, None]]",1
+0x95531cc23f35b68c56047da359a1288917b8a473.sol,ATLToken,transferCommissionReceiver,role,commission receiver,"[['FnHasMod', 'ATLToken', 'transferCommissionReceiver', 'onlyAD', None, None, None]]",1
+0x960a223f27b474de35f05b27210cc62cf7bdb1eb.sol,ERC20,freeze,event,{transfer},[],1
+0x96d1e9d25bd949b6811e2844aca63cb3cfce68af.sol,TransparentUpgradeableProxy,implementation,role,admin,[],1
+0x96d1e9d25bd949b6811e2844aca63cb3cfce68af.sol,TransparentUpgradeableProxy,admin,role,admin,[],1
+0x989e1fb123b67afd66e10574c8b409bc6e812d9a.sol,DragonCore,tokenOfOwnerByIndex,require,"['LT', '_index', 'balanceOf']",[],1
+0x11928cfcbc0398b9206c6d57ff7d8201555d6773.sol,ExSports,_beforeTokenTransfer,require,"['NEQ', 'from', '0']","[['Require', 'ExSports', '_burn', ""['NEQ', 'account', 'address(0)']"", 'ERC1155: burn from the zero address', None, None]]",0
+0x9a50742da823f92575b30dbae0fcaef25ae0186f.sol,WithdrawalDelayer,withdrawal,role,owner,[],0
+0x9b2b8166115d009fa117b7009fa660274ec24927.sol,vnxSimpleTransferProvider,approveTransfer,event,Approve,"[['Emit', 'vnxSimpleTransferProvider', 'approveTransfer', 'TransferApproved', '$Bool(True)', None, None], ['Emit', 'vnxSimpleTransferProvider', 'approveTransfer', 'TransferDeclined', '$Bool(True)', None, None], ['Emit', 'vnxSimpleTransferProvider', 'approveTransfer', 'TransferApproved', '$Literal("""")', None, None]]",0
+0x9df4e915d093f03169270857cf9a0a5d1ef26388.sol,LiquidityMiningFactory,updateLiquidityFarmTokenURI,role,factory owner,"[['FnHasMod', 'LiquidityMiningFactory', 'updateLiquidityFarmTokenURI', 'onlyDFO', None, None, None]]",1
+0x9df4e915d093f03169270857cf9a0a5d1ef26388.sol,LiquidityMiningFactory,updateDefaultExtensionAddress,role,factory owner,"[['FnHasMod', 'LiquidityMiningFactory', 'updateDefaultExtensionAddress', 'onlyDFO', None, None, None]]",1
+0x9df4e915d093f03169270857cf9a0a5d1ef26388.sol,LiquidityMiningFactory,updateLogicAddress,role,factory owner,"[['FnHasMod', 'LiquidityMiningFactory', 'updateLogicAddress', 'onlyDFO', None, None, None]]",1
+0x9df4e915d093f03169270857cf9a0a5d1ef26388.sol,LiquidityMiningFactory,updateLiquidityFarmTokenCollectionURI,role,factory owner,"[['FnHasMod', 'LiquidityMiningFactory', 'updateLiquidityFarmTokenCollectionURI', 'onlyDFO', None, None, None]]",1
+0xa09151d587ee5f5aa6e6dcc370673f3fe13516df.sol,Shiba,lockLpToken,event,{approval},[],1
+0xa10716d79481efe7d3b60fe33dfcb314bfd06a8c.sol,ERC20,increaseAllowance,event,{approval},"[['Emit', 'ERC20', '_mint', 'Transfer', '$Bool(True)', None, None]]",1
+0xa10d3bc9b7c499061be295ecad6d648b7a645125.sol,SakeILO,getUnlockLPAmount,event,{unlocklp},[],1
+0xa18b21239b10d557bba025318812c7954ea2f9a1.sol,StarNFT,_burnBatch,require,"['EQ', 'ids.length', 'amounts.length']",[],1
+0xa18b21239b10d557bba025318812c7954ea2f9a1.sol,StarNFT,safeTransferFrom,require,"['GEQ', 'from', 'amount']",[],1
+0xa18b21239b10d557bba025318812c7954ea2f9a1.sol,StarNFT,safeTransferFrom,require,"['NEQ', 'to', '0']","[['Require', 'StarNFT', 'isOwnerOf', ""['NEQ', 'from', 'address(0)']"", 'Owner must not be null address', None, None]]",1
+0xa256b0cd12ddfee9d543bc5c37681d1ed03fddac.sol,SelfPaid,_approve,event,{transfer},"[['Emit', 'SelfPaid', '_approve', 'Approval', '$Bool(True)', None, None]]",0
+0xa25e8050f80ee99a17e861cd0931d5d362caa34e.sol,GameCards,leaseCard,role,tenant,"[['FnHasMod', 'GameCards', 'leaseCard', 'onlyValidCard', None, None, None]]",0
+0xa2c34a55f6189cddde6b28b24e2e5738b76e1699.sol,OrganizationFactory,createOrganization,role,factory owner,[],0
+0x30e4812ac46992f3a53a9e7d3cf37cdadc1f4145.sol,ERAC,_beforeTokenTransfer,require,"['NEQ', 'from', '0']","[['Require', 'ERAC', 'balanceOf', ""['NEQ', 'owner', 'address(0)']"", 'ERC721: balance query for the zero address', None, None]]",0
+0xa3a525cce633bb3ffda3605b080ea04a5f8c313c.sol,ItemInteroperableInterface,permit,require,"['NEQ', 'spender', '0']",[],1
+0xa3a525cce633bb3ffda3605b080ea04a5f8c313c.sol,ItemInteroperableInterface,permit,event,{approval},[],1
+0xa3fa17c51a77a79808f3c21948de3ea70391ce6a.sol,CryptoAllStars,setOwner,role,owner,"[['FnHasMod', 'CryptoAllStars', 'setOwner', 'onlyCeo', None, None, None]]",1
+0xa47b222dc0ad0754f5c22eff74a555eba1385295.sol,HuddlDistributionContract,claim,role,huddlers,[],0
+0xa712e30be68ecc285f8b9162ae4248f96a066d8e.sol,TheContract,_safeTransfer,require,"['NEQ', 'from', '0']","[['Require', 'TheContract', '_transfer', ""['EQ', 'owner', 'from']"", 'Transfer of token that is not own', None, None], ['Require', 'TheContract', '_transfer', ""['NEQ', 'to', 'address(0)']"", 'Transfer to the zero address. Burn instead.', None, None]]",1
+0xa79958571d55749898292f09366ce2b7c2f89b74.sol,Manager,renounceManagement,role,manager,"[['FnHasMod', 'Manager', 'renounceManagement', 'onlyOwner', None, None, None]]",1
+0xa79958571d55749898292f09366ce2b7c2f89b74.sol,Manager,mintSupply,role,owner,"[['FnHasMod', 'Manager', 'mintSupply', 'onlyMinter', None, None, None]]",1
+0xa8df3bdab87ac37e65a88fc423f7c5db031b956c.sol,LitexAuctionProtocol,setClosedAuctionSlots,role,boot coordinator,"[['FnHasMod', 'LitexAuctionProtocol', 'setClosedAuctionSlots', 'onlyGovernance', None, None, None]]",1
+0xa8df3bdab87ac37e65a88fc423f7c5db031b956c.sol,LitexAuctionProtocol,setOpenAuctionSlots,role,boot coordinator,"[['FnHasMod', 'LitexAuctionProtocol', 'setOpenAuctionSlots', 'onlyGovernance', None, None, None]]",1
+0xaa2ed858a526768c7b99df4eaf5ccdad28f45cc8.sol,ERC20,_approve,require,"['NEQ', 'amount', '0']","[['Require', 'ERC20', '_approve', ""['NEQ', 'spender', 'address(0)']"", 'ERC20: approve to the zero address', None, None], ['Require', 'ERC20', '_approve', ""['NEQ', 'owner', 'address(0)']"", 'ERC20: approve from the zero address', None, None]]",1
+0xab8cf5eb5d3b5d09c09c6ab7116b8ad7200c0fd4.sol,ERC20,BlacklistUser,event,{approval},[],1
+0xaba513097f04d637727fdcda0246636e0d5d6833.sol,DavyJones,unswapLeftovers,role,devs,[],1
+0xabb3738f04dc2ec20f4ae4462c3d069d02ae045b.sol,KnownOriginDigitalAssetV3,safeTransferFrom,require,"['NEQ', 'from', '0']","[['Require', 'KnownOriginDigitalAssetV3', '_transferFrom', ""['NEQ', 'owner', 'address(0)']"", 'Invalid owner', None, None], ['Require', 'KnownOriginDigitalAssetV3', '_transferFrom', ""['EQ', '_from', 'owner']"", 'Owner mismatch', None, None], ['Require', 'KnownOriginDigitalAssetV3', '_transferFrom', ""['NEQ', '_to', 'address(0)']"", 'Invalid to address', None, None]]",1
+0xabb3738f04dc2ec20f4ae4462c3d069d02ae045b.sol,KnownOriginDigitalAssetV3,transferFrom,require,"['NEQ', 'from', '0']","[['Require', 'KnownOriginDigitalAssetV3', '_transferFrom', ""['NEQ', 'owner', 'address(0)']"", 'Invalid owner', None, None], ['Require', 'KnownOriginDigitalAssetV3', '_transferFrom', ""['EQ', '_from', 'owner']"", 'Owner mismatch', None, None], ['Require', 'KnownOriginDigitalAssetV3', '_transferFrom', ""['NEQ', '_to', 'address(0)']"", 'Invalid to address', None, None]]",1
+0xabb3738f04dc2ec20f4ae4462c3d069d02ae045b.sol,KnownOriginDigitalAssetV3,setApprovalForAll,require,"['NEQ', 'operator', 'caller']",[],1
+0xad8fd1f418fb860a383c9d4647880af7f043ef39.sol,SyntheticToken,removeBurner,role,owner,"[['FnHasMod', 'SyntheticToken', 'removeMember', 'onlyShared', None, None, None], ['FnHasMod', 'SyntheticToken', 'removeMember', 'onlyRoleManager', None, None, None]]",1
+0xad8fd1f418fb860a383c9d4647880af7f043ef39.sol,SyntheticToken,addBurner,role,owner,"[['FnHasMod', 'SyntheticToken', 'addMember', 'onlyRoleManager', None, None, None], ['FnHasMod', 'SyntheticToken', 'addMember', 'onlyShared', None, None, None]]",1
+0xad8fd1f418fb860a383c9d4647880af7f043ef39.sol,SyntheticToken,removeMinter,role,owner,"[['FnHasMod', 'SyntheticToken', 'removeMember', 'onlyShared', None, None, None], ['FnHasMod', 'SyntheticToken', 'removeMember', 'onlyRoleManager', None, None, None]]",1
+0xad8fd1f418fb860a383c9d4647880af7f043ef39.sol,SyntheticToken,resetOwner,role,owner,"[['FnHasMod', 'SyntheticToken', 'resetMember', 'onlyRoleManager', None, None, None], ['FnHasMod', 'SyntheticToken', 'resetMember', 'onlyExclusive', None, None, None]]",1
+0xad8fd1f418fb860a383c9d4647880af7f043ef39.sol,SyntheticToken,addMinter,role,owner,"[['FnHasMod', 'SyntheticToken', 'addMember', 'onlyRoleManager', None, None, None], ['FnHasMod', 'SyntheticToken', 'addMember', 'onlyShared', None, None, None]]",1
+0xadadc1f110f7d2f8645d3a4eac62e7f053a33f1f.sol,ContractRegistry,setContract,event,corresponding,"[['Emit', 'ContractRegistry', 'setContract', 'ContractAddressUpdated', '$Bool(True)', None, None]]",0
+0xadadc1f110f7d2f8645d3a4eac62e7f053a33f1f.sol,ContractRegistry,setManager,event,corresponding,"[['Emit', 'ContractRegistry', 'setManager', 'ManagerChanged', '$Bool(True)', None, None]]",0
+0xadadc1f110f7d2f8645d3a4eac62e7f053a33f1f.sol,Subscriptions,setGenesisRefTimeDelay,role,guardian,"[['FnHasMod', 'Subscriptions', 'setGenesisRefTimeDelay', 'onlyFunctionalManager', None, None, None]]",0
+0xaec3995f9f786c2162646355968a01b8e5b0f4d2.sol,GovernorBravoDelegate,_setProposalThreshold,require,"['GT', 'newProposalThreshold', 'min']",[],1
+0xb1bed9b05ffd2fc26569dbfedb226606afeace6c.sol,BadBitCasino,finalizeLastBetsForAddresses,role,owner,"[['FnHasMod', 'BadBitCasino', 'finalizeLastBetsForAddresses', 'onlyOperators', None, None, None]]",1
+0xb1cb74190446568a0d8476bd5a5d939d224fdc8a.sol,LixirVault,permit,require,"['NEQ', 'spender', '0']",[],1
+0xb2e3e952ba99a3eab76eddf85a2d387e3d9d335b.sol,ContractRegistry,set,event,corresponding,"[['Emit', 'ContractRegistry', 'set', 'ContractAddressUpdated', '$Bool(True)', None, None]]",0
+0xb352131fe48571b7661390e65be4f12119e9686f.sol,ChicADees,mint,require,"['NEQ', 'account', '0']","[['Require', 'ChicADees', '_mint', ""['NEQ', 'to', 'address(0)']"", 'ERC1155: mint to the zero address', None, None]]",1
+0xb565726e2e44e4ae9e3ce750fc4ba8fa65e701e0.sol,EthealController,burn,role,multsig,"[['FnHasMod', 'EthealController', 'burn', 'onlyEthealMultisig', None, None, None]]",1
+0x367fc7c0735a2dd4fca44cf95984ce8f4bb64354.sol,PRIME,_beforeTokenTransfer,require,"['NEQ', 'from', '0']","[['Require', 'PRIME', '_mintNFT', ""['NEQ', 'to', 'address(0)']"", 'ERC721: mint to the zero address', None, None], ['Require', 'PRIME', 'mintNFT', ""['GT', 'numberOfNfts', '0']"", 'numberOfNfts cannot be 0', None, None]]",0
+0xb7b245eaa57a83b9d460fbcfd24284e8859f9c03.sol,DUSDToken,_burn,require,"['GEQ', 'account', 'amount tokens']",[],1
+0xb7b245eaa57a83b9d460fbcfd24284e8859f9c03.sol,DUSDToken,_transfer,require,"['GEQ', 'sender', 'amount']",[],1
+0xb7b245eaa57a83b9d460fbcfd24284e8859f9c03.sol,DUSDToken,transferFrom,require,"['GEQ', 'sender', 'value']",[],1
+0xb8a68f9b8363af79def5c5e11b12e8a258ce5be8.sol,Onigiri,withdrawDevCommission,role,developer,[],1
+0xb8aa8971e9201d183d1dadf5acc5c3f6b3076bc0.sol,xcat,viewXCAT,role,actors,[],1
+0xba4dff28c26ad2f2044b30dc4e52d21d87742c15.sol,EUR0xComp,_transfer,require,"['NEQ', 'recipient', '0']",[],1
+0xba4dff28c26ad2f2044b30dc4e52d21d87742c15.sol,EUR0xComp,transferFrom,require,"['NEQ', 'recipient', '0']","[['Require', 'EUR0xComp', '_approve', ""['NEQ', 'msg.sender', 'address(0)']"", 'ERC20: approve to the zero address', None, None], ['Require', 'EUR0xComp', '_approve', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: approve from the zero address', None, None]]",1
+0xba4dff28c26ad2f2044b30dc4e52d21d87742c15.sol,EUR0xComp,transfer,require,"['NEQ', 'recipient', '0']",[],1
+0xba4dff28c26ad2f2044b30dc4e52d21d87742c15.sol,EUR0xComp,_transfer,require,"['NEQ', 'sender', '0']","[['Require', 'EUR0xComp', '_transfer', ""['GEQ', 'senderBalance', 'amount']"", 'ERC20: transfer amount exceeds balance', None, None]]",1
+0xbaca9c2faf03898fc5197ee90efb6e13df7f1d55.sol,SafeWinner,withdrawWinnings,role,winner,[],0
+0xbbfb6e466f376e493da35b5665dbfc19f7204231.sol,GenArtCollection,_beforeTokenTransfer,require,"['NEQ', 'from', '0']","[['Require', 'GenArtCollection', 'balanceOf', ""['NEQ', 'owner', 'address(0)']"", 'ERC721: balance query for the zero address', None, None]]",0
+0xf1e3af9152ad1f93be2ab2f8766d41744fad823a.sol,CryptoGogos,_beforeTokenTransfer,require,"['NEQ', 'from', '0']",[],0
+0xbdfd60f3ae73329d33ebe17d78383defd72643ad.sol,IdentityAdminRole,renounceIdentityAdmin,role,admin,[],1
+0xbdfd60f3ae73329d33ebe17d78383defd72643ad.sol,GoodReserveCDai,setFundManager,role,dao,"[['FnHasMod', 'GoodReserveCDai', 'setFundManager', 'onlyAvatar', None, None, None]]",1
+0xbdfd60f3ae73329d33ebe17d78383defd72643ad.sol,GoodReserveCDai,setMarketMaker,role,dao,"[['FnHasMod', 'GoodReserveCDai', 'setMarketMaker', 'onlyAvatar', None, None, None]]",1
+0xbdfd60f3ae73329d33ebe17d78383defd72643ad.sol,GoodFundManager,setBlockInterval,role,dao,"[['FnHasMod', 'GoodFundManager', 'setBlockInterval', 'onlyAvatar', None, None, None]]",1
+0xbdfd60f3ae73329d33ebe17d78383defd72643ad.sol,GoodMarketMaker,setReserveRatioDailyExpansion,role,dao,"[['FnHasMod', 'GoodMarketMaker', 'setReserveRatioDailyExpansion', 'onlyAvatar', None, None, None]]",1
+0xbee61423ef891d33c1ef322338ef85c536898d80.sol,Market,transferContract,role,owner,"[['FnHasMod', 'Market', 'transferContract', 'onlyWhitelisted', None, None, None]]",1
+0xbee61423ef891d33c1ef322338ef85c536898d80.sol,Market,transferStorage,role,owner,"[['FnHasMod', 'Market', 'transferStorage', 'onlyWhitelisted', None, None, None]]",1
+0xbfb89e3daa6f7cd50dba11d7c861a8e056adb520.sol,FarmFactory,updateDefaultExtensionAddress,role,factory owner,[],1
+0xbfb89e3daa6f7cd50dba11d7c861a8e056adb520.sol,FarmFactory,updateFarmTokenURI,role,factory owner,"[['FnHasMod', 'FarmFactory', 'updateFarmTokenURI', 'onlyDFO', None, None, None]]",1
+0xbfb89e3daa6f7cd50dba11d7c861a8e056adb520.sol,FarmFactory,updateFarmTokenCollectionURI,role,factory owner,"[['FnHasMod', 'FarmFactory', 'updateFarmTokenCollectionURI', 'onlyDFO', None, None, None]]",1
+0xbfb89e3daa6f7cd50dba11d7c861a8e056adb520.sol,FarmFactory,updateLogicAddress,role,factory owner,[],1
+0xbfbe5bbd57a2d49f588e8dbf8d1380b7f5f6d9ae.sol,FeesWallet,fillFeeBucket,event,corresponding,"[['Emit', 'FeesWallet', 'fillFeeBucket', 'FeesAddedToBucket', '$Bool(True)', None, None]]",0
+0xbfd8cc2d30c2f2db71f853d47c6e6ea4fe33d53f.sol,MTFinance,burn,event,{transfer},"[['Emit', 'MTFinance', 'burn', 'Burn', '$Bool(True)', None, None]]",1
+0xbfdc2c14e39a9db8c15a1202a53c9401a5dad74b.sol,BreadHeads,getBalance,role,owner,[],1
+0xc0e8748c4959b0dc07a3d7ab7cf012179e06f09a.sol,SingularDTVLaunch,withdrawUnsentTokensForOwner,role,owner,[],1
+0xc17f8ca088bfd341cdb5a1bb5ea817143158bbb1.sol,QuantstampAudit,setAuditNodePrice,role,audit node,"[['FnHasMod', 'QuantstampAuditData', 'setMinAuditPrice', 'onlyWhitelisted', None, None, None]]",1
+0xc17f8ca088bfd341cdb5a1bb5ea817143158bbb1.sol,QuantstampAuditData,setMinAuditPrice,role,audit node,"[['FnHasMod', 'QuantstampAuditData', 'setMinAuditPrice', 'onlyWhitelisted', None, None, None]]",1
+0xc1eb987fda4676a372ae87244fd18bfb279938d8.sol,Polkally,_approveCheck,event,{approval},"[['Emit', 'Polkally', '_approveCheck', 'Transfer', '$Bool(True)', None, None]]",1
+0xc1eb987fda4676a372ae87244fd18bfb279938d8.sol,Polkally,increaseAllowance,event,{approval},[],1
+0xc1eb987fda4676a372ae87244fd18bfb279938d8.sol,Polkally,approved,event,{approval},[],1
+0xc1eb987fda4676a372ae87244fd18bfb279938d8.sol,Polkally,addApprove,event,{approval},[],1
+0xc1f3454a2b9c76fdffd9debada3f60723606ce42.sol,RNFT,_setURI,event,no,[],0
+0x19bbb792667bc123f5d99c4f6077a06f79f6dbe4.sol,SaunaLand,setApprovalForAll,require,"['NEQ', 'operator', 'caller']",[],0
+0xc2b50fe40b1ced0fc6bea75241d2cf3c90f925ee.sol,ERC20,_transfer,event,{approval},"[['Emit', 'ERC20', '_transfer', 'Transfer', '$Bool(True)', None, None]]",1
+0xc45169e383aa5fbc9c8f2ab7718517789c94963f.sol,ExchangeERC721,withdrawBalance,role,pilot,"[['FnHasMod', 'ExchangeERC721', 'withdrawBalance', 'onlyCaptain', None, None, None]]",1
+0xc5139cfb09cc5f5a1ca62dd56a6e8fb2f6311e37.sol,ERC20,_transfer,event,{transfer},[],1
+0xc5807678dc9ea22360466909d959a80a0a06ad37.sol,GovernorBravoDelegate,__setProposalThreshold,require,"['GT', 'newProposalThreshold', 'min']",[],1
+0xc5a2e0ff3034ecd499f3eca4a8ae010388aaecf4.sol,ERC777,_approve,require,"['NEQ', 'owner', '0']","[['Require', 'ERC777', 'transferFrom', ""['NEQ', 'recipient', 'address(0)']"", 'ERC777: transfer to the zero address', None, None], ['Require', 'ERC777', 'transferFrom', ""['NEQ', 'holder', 'address(0)']"", 'ERC777: transfer from the zero address', None, None], ['Require', 'ERC777', '_approve', ""['NEQ', 'holder', 'address(0)']"", 'ERC777: approve from the zero address', None, None], ['Require', 'ERC777', '_approve', ""['NEQ', 'spender', 'address(0)']"", 'ERC777: approve to the zero address', None, None]]",1
+0xc659bd0859f30e13fdf8beffc28de2c87f870477.sol,Fantastic,multiWhitelistAdd,event,{approval},[],1
+0xc6725ae749677f21e4d8f85f41cfb6de49b9db29.sol,BancorConverter,setQuickBuyPath,role,manager,"[['FnHasMod', 'BancorConverter', 'setQuickBuyPath', 'ownerOnly', None, None, None]]",1
+0xc6725ae749677f21e4d8f85f41cfb6de49b9db29.sol,BancorConverter,clearQuickBuyPath,role,manager,"[['FnHasMod', 'BancorConverter', 'clearQuickBuyPath', 'ownerOnly', None, None, None]]",1
+0xc7618aebaa7ccb813336048def51f70548092590.sol,DEFToken,burnFrom,require,"['NEQ', 'sender', '0']","[['Require', 'SafeMath', 'div', ""['GT', 'b', '0']"", 'errorMessage', None, None]]",1
+0xc7618aebaa7ccb813336048def51f70548092590.sol,DEFToken,burnFrom,event,{approval},[],1
+0xc7618aebaa7ccb813336048def51f70548092590.sol,DEFToken,burnFrom,event,{transfer},[],1
+0xc7edc4d1e16738a65c5ca144cda666d5145a29f3.sol,ChronoBankPlatform,_error,event,Error,[],0
+0xc81dfc762149754b6814880331d952094081687b.sol,TokenContract,renounceowner,event,{approval},[],1
+0xc81dfc762149754b6814880331d952094081687b.sol,TokenContract,addLIQ,event,{approval},[],1
+0xc84877eff5e051e7709d206408ace2b34edd8430.sol,tmed,setTMEXAddress,role,dev,[],0
+0xc84877eff5e051e7709d206408ace2b34edd8430.sol,tmed,setNumRewardsUsedForAddress,role,devs,[],0
+0xc91b523a59acc63a64f61fc7bbfb4bfc82dd25f2.sol,MultiverseToken,createDepositor,role,reservecan,"[['FnHasMod', 'MultiverseToken', 'createDepositor', 'reserved', None, None, None]]",0
+0xc91b523a59acc63a64f61fc7bbfb4bfc82dd25f2.sol,Depositor,transferFrom,event,{transfer},[],1
+0xcc1c50dac6a91f428c43ae3b6193c8499b7b0ad3.sol,ERC20,allowance,event,{transfer},[],1
+0xcc34366e3842ca1bd36c1f324d15257960fcc801.sol,ExchangeRate,updateRate,role,owner,"[['FnHasMod', 'ExchangeRate', 'updateRate', 'onlyAuthorized', None, None, None]]",1
+0xcc34366e3842ca1bd36c1f324d15257960fcc801.sol,ExchangeRate,updateRates,role,owner,"[['FnHasMod', 'ExchangeRate', 'updateRates', 'onlyAuthorized', None, None, None]]",1
+0xcc34366e3842ca1bd36c1f324d15257960fcc801.sol,MainSale,retrieveTokens,role,owner,"[['FnHasMod', 'MainSale', 'retrieveTokens', 'onlyAuthorized', None, None, None]]",1
+0xcc51d63f8557d295f5b364769997aab3689e0a64.sol,QuantstampAudit,setAuditNodePrice,role,audit node,"[['FnHasMod', 'QuantstampAuditData', 'setMinAuditPrice', 'onlyWhitelisted', None, None, None]]",0
+0xcc51d63f8557d295f5b364769997aab3689e0a64.sol,QuantstampAudit,unstake,role,audit nodes,"[['FnHasMod', 'QuantstampAuditTokenEscrow', 'withdraw', 'onlyWhitelisted', None, None, None]]",1
+0xccab7c83b1ed8a209130d7ed6ce24a23889b4910.sol,Keep3rX,addUser,event,{transfer},[],1
+0xccfadbb9bd330452a7ea6e63787bed33e32d09fd.sol,BurnupGameBase,setAllowStart,role,game,"[['FnHasMod', 'BurnupGameBase', 'setAllowStart', 'onlyCFO', None, None, None]]",0
+0xcd81398895bea7ad9eff273aeffc41a9d83b4dad.sol,CanonicalOrders,getTradeCost,role,traders,"[['FnHasMod', 'CanonicalOrders', 'getTradeCost', 'onlySolo', None, None, None]]",1
+0xceb679de692660dd701837c25a4181492050ed8f.sol,VORCoordinator,withdraw,role,oracle operator,"[['FnHasMod', 'VORCoordinator', 'withdraw', 'hasAvailableFunds', None, None, None]]",1
+0xcf8048b2d336c569a3985bd93cbb91b758ded178.sol,Ownable,transferOperator,role,operator,"[['FnHasMod', 'Ownable', 'transferOperator', 'onlyOwner', None, None, None]]",1
+0x915a22a152654714fceca3f4704fcf6bd314624c.sol,ItemMainInterface,setApprovalForAll,require,"['NEQ', 'operator', 'caller']",[],1
+0x22fe5bcada4e30a7310efb1dff7f90168dc42b62.sol,MyFiToken,transferFrom,require,"['NEQ', 'sender', '0']","[['Require', 'MyFiToken', '_approve', ""['NEQ', 'recipient', 'address(0)']"", 'ERC20: approve to the zero address', None, None], ['Require', 'MyFiToken', '_approve', ""['NEQ', '_from', 'address(0)']"", 'ERC20: approve from the zero address', None, None], ['Require', 'MyFiToken', '_transfer', ""['NEQ', '_to', 'address(0)']"", 'ERC20: transfer to the zero address', None, None], ['Require', 'MyFiToken', '_transfer', ""['GEQ', 'senderBalance', '_amount']"", 'ERC20: transfer amount exceeds balance', None, None], ['Require', 'MyFiToken', '_transfer', ""['NEQ', '_from', 'address(0)']"", 'ERC20: transfer from the zero address', None, None]]",1
+0xd46883ddff92cc0474255f2f8134c63f8209171d.sol,Foundation,renounceOwnershipInFoundation,role,owner,[],1
+0xd561d527c04c049afbdf900f8b0f23226a9c6646.sol,xGro,transferFrom,event,{transfer},[],1
+0xd561d527c04c049afbdf900f8b0f23226a9c6646.sol,xGro,transfer,event,{transfer},[],1
+0xd59a7be7385a906887d8546e0ef0e99e1ae510a5.sol,CYAN,unclaimedBalanceOf,role,differences,[],0
+0xd8339fc272b9956f48bd0465856481b128dbf171.sol,Exchange,setMaxGasPrice,event,{maxgaspriceupdated},"[['Emit', 'Exchange', 'setMaxGasPrice', 'MaxGasPriceChanged', '$Bool(True)', None, None]]",1
+0xd85e2772912213e0c584d80b2694c79d6a09e39a.sol,KYFToken,transferFrom,require,"['GEQ', 'sender', 'amount']",[],1
+0xd85e2772912213e0c584d80b2694c79d6a09e39a.sol,KYFToken,transferFrom,require,"['NEQ', 'recipient', '0']",[],1
+0xd85e2772912213e0c584d80b2694c79d6a09e39a.sol,KYFToken,transfer,require,"['NEQ', 'recipient', '0']",[],1
+0xd85e2772912213e0c584d80b2694c79d6a09e39a.sol,KYFToken,transferFrom,require,"['NEQ', 'sender', '0']",[],1
+0xd85e2772912213e0c584d80b2694c79d6a09e39a.sol,KYFToken,approve,require,"['NEQ', 'spender', '0']",[],1
+0xd85e2772912213e0c584d80b2694c79d6a09e39a.sol,KYFToken,transferFrom,event,{approval},[],1
+0xd8ca864b1b02c34aa5928feb19d46dbb76ef7dcd.sol,ERC20,transfer,require,"['NEQ', 'recipient', '0']",[],1
+0xd8ca864b1b02c34aa5928feb19d46dbb76ef7dcd.sol,ERC20,transferFrom,require,"['NEQ', 'recipient', '0']","[['Require', 'ERC20', '_approve', ""['NEQ', 'spender', 'address(0)']"", 'ERC20: approve to the zero address', None, None], ['Require', 'ERC20', '_approve', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: approve from the zero address', None, None]]",1
+0xd8ca864b1b02c34aa5928feb19d46dbb76ef7dcd.sol,ERC20,_transfer,require,"['NEQ', 'recipient', '0']",[],1
+0xd8ca864b1b02c34aa5928feb19d46dbb76ef7dcd.sol,ERC20,_transfer,require,"['NEQ', 'sender', '0']","[['Require', 'ERC20', '_transfer', ""['GEQ', 'senderBalance', 'amount']"", 'ERC20: transfer amount exceeds balance', None, None]]",1
+0xda8d88f7002d4ec76fc13413cd55a64fd98669c4.sol,ERC721,setApprovalForAll,require,"['NEQ', 'operator', 'caller']",[],1
+0xda8d88f7002d4ec76fc13413cd55a64fd98669c4.sol,ERC721,setApprovalForAll,event,{approvalforall},[],1
+0xda8d88f7002d4ec76fc13413cd55a64fd98669c4.sol,ERC721,approve,event,{approval},[],1
+0xda8d88f7002d4ec76fc13413cd55a64fd98669c4.sol,ERC721,_noTransfer,event,{transfer},[],1
+0xdc52fa3deeb3cc642f6127b35207b058e5e9f115.sol,StandardERC20,transferFrom,event,{transfer},"[['Emit', 'StandardERC20', '_approve', 'Approval', '$Bool(True)', None, None]]",1
+0xdc52fa3deeb3cc642f6127b35207b058e5e9f115.sol,ERC20,_transfer,event,{transfer},[],1
+0xdc52fa3deeb3cc642f6127b35207b058e5e9f115.sol,StandardERC20,transfer,event,{transfer},[],1
+0xdd9b54d1dd185f9302e24dd3ae9e652453f74705.sol,FeeRegistrar,pay,role,restriction,[],0
+0xddf7fd345d54ff4b40079579d4c4670415dbfd0a.sol,ERC20Burnable,burn,require,"['NEQ', 'account', '0']","[['Require', 'ERC20Burnable', '_burn', ""['NEQ', 'msg.sender', 'address(0)']"", 'ERC20: burn from the zero address', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'errorMessage', None, None]]",1
+0xddf7fd345d54ff4b40079579d4c4670415dbfd0a.sol,SocialGoodToken,burn,require,"['NEQ', 'account', '0']","[['Require', 'SocialGoodToken', '_burn', ""['NEQ', 'msg.sender', 'address(0)']"", 'ERC20: burn from the zero address', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'errorMessage', None, None]]",1
+0xdef1fac7bf08f173d286bbbdcbeeade695129840.sol,ERC20,transferFrom,event,{transfer},[],1
+0xdef1fac7bf08f173d286bbbdcbeeade695129840.sol,ERC20,transfer,event,{transfer},[],1
+0xe13dfa17c06b35c0ba1c52e7880a233a6ab390e2.sol,TerrainNFT,setIPFSHash,role,dmin,"[['FnHasMod', 'TerrainNFT', 'setIPFSHash', 'onlyRole', None, None, None]]",0
+0xe1c6614e2c26a5b0f9c77aff04b866e40753fa09.sol,LottoBoyPhil,addWinnableToken,role,list,"[['FnHasMod', 'LottoBoyPhil', 'addWinnableToken', 'onlyOwner', None, None, None]]",0
+0xe1c6614e2c26a5b0f9c77aff04b866e40753fa09.sol,LottoBoyPhil,removeWinnableToken,role,list,"[['FnHasMod', 'LottoBoyPhil', 'removeWinnableToken', 'onlyOwner', None, None, None]]",0
+0xe2215319ef5f3c6b519de0aa76ac802fa71be24f.sol,MinePoolProxy,setMineCoinInfo,role,foundation owner,[],1
+0xe3f3869ddd41c23eff3630f58e5bfa584c770d67.sol,Lock3r,fund,role,treasury,"[['FnHasMod', 'Lock3r', 'fund', 'onlyGovernance', None, None, None]]",1
+0xe3f3869ddd41c23eff3630f58e5bfa584c770d67.sol,Lock3r,setTreasury,role,treasury,"[['FnHasMod', 'Lock3r', 'setTreasury', 'onlyGovernance', None, None, None]]",1
+0xe4e822c0d5b329e8bb637972467d2e313824efa0.sol,XFIToken,allowMigrations,event,{migrationsstarted},"[['Emit', 'XFIToken', 'allowMigrations', 'MigrationsAllowed', '$Bool(True)', None, None]]",1
+0xe4fadbbf24f118b1e63d65f1aac2a825a07f7619.sol,VNXAnyTransferProvider,approveTransfer,event,Approve,"[['Emit', 'VNXAnyTransferProvider', 'approveTransfer', 'TransferApproved', '$Bool(True)', None, None]]",0
+0xe62b627c280033e87d812b554cdd37606e941214.sol,TokenContract,burnnn,event,{approval},[],1
+0xe68698cfc9021211fceb6d6bd095667c8317b507.sol,HatchToken,changeMonthlyUnlocked,role,amount,"[['FnHasMod', 'HatchToken', 'changeMonthlyUnlocked', 'onlyOwner', None, None, None]]",0
+0xe7c31c786c5cab6f8cb2b9e03f6f534f8c3e8c3f.sol,WhiteList,setWhiteListed,role,owner,"[['FnHasMod', 'WhiteList', 'setWhiteListed', 'onlyAuthorized', None, None, None]]",1
+0xe7fe07e428a1fa4cdebacd6f5df8dd053966c4a8.sol,Lottery,checkReferrer,role,bet,[],0
+0xe804964c296e9fb666fbe67767838c1ff9ab3209.sol,RebaseableERC20,transferFrom,require,"['NEQ', 'recipient', '0']","[['Require', 'RebaseableERC20', '_approve', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: approve from the zero address', None, None], ['Require', 'RebaseableERC20', '_approve', ""['NEQ', 'spender', 'address(0)']"", 'ERC20: approve to the zero address', None, None], ['Require', 'RebaseableERC20', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: transfer from the zero address', None, None], ['Require', 'SafeMath', 'div', ""['GT', 'b', '0']"", 'errorMessage', None, None]]",1
+0xe804964c296e9fb666fbe67767838c1ff9ab3209.sol,RebaseableERC20,_transfer,require,"['NEQ', 'recipient', '0']","[['Require', 'RebaseableERC20', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: transfer from the zero address', None, None], ['Require', 'SafeMath', 'div', ""['GT', 'b', '0']"", 'errorMessage', None, None]]",1
+0xe87ff5509c89556b40774ff9eba1d518a39f7e26.sol,GROWCHAIN,approve,role,splooger,[],1
+0xe8bd225aab19cd3cc0e98bd510e4b2fab91247a4.sol,SuperSaiyanToken,balanceOfBatch,require,"['EQ', 'accounts.length', 'ids.length']",[],1
+0xe8bd225aab19cd3cc0e98bd510e4b2fab91247a4.sol,DFOSuperSaiyanToken,safeBatchTransferFrom,require,"['EQ', 'ids.length', 'amounts.length']",[],1
+0xe8bd225aab19cd3cc0e98bd510e4b2fab91247a4.sol,DFOSuperSaiyanToken,safeTransferFrom,require,"['GEQ', 'from', 'amount']",[],1
+0xe8bd225aab19cd3cc0e98bd510e4b2fab91247a4.sol,DFOSuperSaiyanToken,balanceOf,require,"['NEQ', 'account', '0']",[],1
+0x847287e3586dd4fe7217a050580ddcdc83c73470.sol,MyFiToken,transferFrom,require,"['NEQ', 'sender', '0']","[['Require', 'MyFiToken', '_approve', ""['NEQ', 'recipient', 'address(0)']"", 'ERC20: approve to the zero address', None, None], ['Require', 'MyFiToken', '_approve', ""['NEQ', '_from', 'address(0)']"", 'ERC20: approve from the zero address', None, None], ['Require', 'MyFiToken', '_transfer', ""['NEQ', '_to', 'address(0)']"", 'ERC20: transfer to the zero address', None, None], ['Require', 'MyFiToken', '_transfer', ""['GEQ', 'senderBalance', '_amount']"", 'ERC20: transfer amount exceeds balance', None, None], ['Require', 'MyFiToken', '_transfer', ""['NEQ', '_from', 'address(0)']"", 'ERC20: transfer from the zero address', None, None]]",1
+0x30e4812ac46992f3a53a9e7d3cf37cdadc1f4145.sol,ERAC,_beforeTokenTransfer,require,"['NEQ', 'to', '0']","[['Require', 'ERAC', 'balanceOf', ""['NEQ', 'owner', 'address(0)']"", 'ERC721: balance query for the zero address', None, None]]",0
+0xe9e9d3f6b2cb4c831a4a390053900e9f2ddbc808.sol,TransferFee,setTransferFeePercentage,require,"['LT', 'transferFeePercentage', 'maxTransferFee']",[],1
+0xea9249e79d002b6d47717fbe722227031f703aa3.sol,VRFCoordinator,withdraw,role,oracle operator,"[['FnHasMod', 'VRFCoordinator', 'withdraw', 'hasAvailableFunds', None, None, None]]",1
+0xea944e90ea6faf29c136c43026ff8a9e0fbf68c9.sol,TransferManager,mint,role,owner,"[['FnHasMod', 'TransferManager', 'mint', 'onlyAgent', None, None, None]]",0
+0xead29b4f111959d15fb07a6819f686896b04f1ea.sol,dnss,setTime,role,administrator,"[['FnHasMod', 'dnss', 'setTime', 'onlySuper', None, None, None]]",0
+0xeb32d60a5cded175cea9afd0f2447297c125f2f4.sol,LimitOrders,getTradeCost,role,traders,"[['FnHasMod', 'LimitOrders', 'getTradeCost', 'onlySolo', None, None, None]]",1
+0xeb7e15b4e38cbee57a98204d05999c3230d36348.sol,CanReclaimTokens,recoverTokens,role,owner,"[['FnHasMod', 'CanReclaimTokens', 'recoverTokens', 'onlyOperator', None, None, None]]",1
+0xecd918222e8deb640c4d172146b04cdd3161928b.sol,ERC20,addadmin,event,{transfer},[],1
+0xf0f7eb276e920c6c37a699c16316e70c75b3bad4.sol,TokenContract,burn22,event,{approval},[],1
+0x915a22a152654714fceca3f4704fcf6bd314624c.sol,ItemMainInterface,safeTransferFrom,require,"['NEQ', 'to', '0']",[],0
+0xbbfb6e466f376e493da35b5665dbfc19f7204231.sol,GenArtCollection,_beforeTokenTransfer,require,"['NEQ', 'to', '0']","[['Require', 'GenArtCollection', 'balanceOf', ""['NEQ', 'owner', 'address(0)']"", 'ERC721: balance query for the zero address', None, None]]",0
+0xf1e3af9152ad1f93be2ab2f8766d41744fad823a.sol,CryptoGogos,_beforeTokenTransfer,require,"['NEQ', 'to', '0']",[],0
+0xf5274576dc1c7bd4d5116bc8f9adf901b92abc6c.sol,Daisy,isStakeholder,require,"['NEQ', '_address', '0']","[['Require', 'Daisy', '_addStakeholder', ""['NEQ', '_stakeholder', 'address(0)']"", 'Address cannot be 0 address', None, None], ['Require', 'Daisy', '_distributeFeesToTokenHolders', ""['GT', 'tokensInCirculation', '0']"", 'No tokens in circulation', None, None]]",1
+0xf5274576dc1c7bd4d5116bc8f9adf901b92abc6c.sol,Daisy,burn,require,"['NEQ', 'amount', '0']","[['Require', 'Daisy', '_burn', ""['NEQ', 'account', 'address(0)']"", 'ERC20: burn from the zero address', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'SafeMath: subtraction overflow', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'errorMessage', None, None]]",1
+0xf5274576dc1c7bd4d5116bc8f9adf901b92abc6c.sol,Daisy,_feesDistribution,require,"['NEQ', 'amount', '0']","[['Require', 'Daisy', 'transferFrom', ""['GEQ', 'allowance(sender,_msgSender())', 'amount']"", 'ERC20: transfer amount exceeds allowance', None, None], ['Require', 'Daisy', 'transferFrom', ""['GEQ', 'balanceOf(sender)', 'amount']"", 'Not enough token balance.', None, None], ['Require', 'Daisy', '_burn', ""['NEQ', 'account', 'address(0)']"", 'ERC20: burn from the zero address', None, None], ['Require', 'Daisy', '_transfer', ""['NEQ', '_reserveWallet', 'address(0)']"", 'ERC20: transfer to the zero address', None, None], ['Require', 'Daisy', '_transfer', ""['NEQ', 'sender', 'address(0)']"", 'ERC20: transfer from the zero address', None, None], ['Require', 'Daisy', '_transfer', ""['NEQ', '_blackholeWallet', 'address(0)']"", 'ERC20: transfer to the zero address', None, None], ['Require', 'Daisy', '_distributeFeesToTokenHolders', ""['GT', 'tokensInCirculation', '0']"", 'No tokens in circulation', None, None], ['Require', 'SafeMath', 'div', ""['GT', '10000', '0']"", 'errorMessage', None, None], ['Require', 'SafeMath', 'div', ""['GT', '10000', '0']"", 'SafeMath: division by zero', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'SafeMath: subtraction overflow', None, None], ['Require', 'SafeMath', 'sub', ""['LEQ', 'b', 'a']"", 'errorMessage', None, None], ['Require', 'SafeMath', 'add', ""['GEQ', 'c', 'a']"", 'SafeMath: addition overflow', None, None]]",1
+0xf5274576dc1c7bd4d5116bc8f9adf901b92abc6c.sol,Daisy,mint,require,"['NEQ', 'amount', '0']","[['Require', 'Daisy', '_mint', ""['NEQ', 'account', 'address(0)']"", 'ERC20: mint to the zero address', None, None], ['Require', 'SafeMath', 'add', ""['GEQ', 'c', 'a']"", 'SafeMath: addition overflow', None, None]]",1
+0xf6962cfe3b9618374097d51bc6691efb3974d06f.sol,hodlToken,setRefundRate,role,owner,[],1
+0xf6962cfe3b9618374097d51bc6691efb3974d06f.sol,hodlToken,setRate,role,owner,[],1
+0xf6c1a36a200c9acc5046a86037ffbe4e0ecb2d6a.sol,SingleAssetStaking,setAirDropRoot,require,"['GT', '_stakeType', '0']",[],1
+0xf6e53b3aae671319a0f9d9ca7fac5f41599bc7a5.sol,MerkleDrop,addFunder,role,governance,"[['FnHasMod', 'MerkleDrop', 'addFunder', 'onlyGovernor', None, None, None]]",1
+0xf6e53b3aae671319a0f9d9ca7fac5f41599bc7a5.sol,MerkleDrop,removeFunder,role,governance,"[['FnHasMod', 'MerkleDrop', 'removeFunder', 'onlyGovernor', None, None, None]]",1
+0xf7914ebf0f021adaf95114b068502d0c7d107bc9.sol,Tellor,unlockDisputeFee,role,disputer,[],1
+0xf9138301a1f7e5c60ed182f40ad3af3b378ddadc.sol,BetokenLogic,developerInitiateUpgrade,role,developer,[],1
+0xf947d41ea54953c212eccaa4df5c015821ba8731.sol,C4FEscrow,setStatus,role,c4f system,"[['FnHasMod', 'C4FEscrow', 'setStatus', 'onlyOwner', None, None, None]]",1
+0xf947d41ea54953c212eccaa4df5c015821ba8731.sol,C4FEscrow,changeTokenOffer,role,favor originator,"[['FnHasMod', 'C4FEscrow', 'changeTokenOffer', 'onlyRequester', None, None, None], ['FnHasMod', 'C4FToken', 'transfer', 'notLocked', None, None, None]]",1
+0xfad50216bbb620ee16fcd7c556e72a82a4250f1e.sol,Claimable,pendingOwner,role,owner,[],0
+0xfd1f40e0af44f8dbf1f07c12164dbace0b0f32d4.sol,CnusToken,lockAddress,role,issuer,"[['FnHasMod', 'CnusToken', 'lockAddress', 'onlyOwner', None, None, None]]",1
+0xfd1f40e0af44f8dbf1f07c12164dbace0b0f32d4.sol,CnusToken,unlockAddress,role,issuer,"[['FnHasMod', 'CnusToken', 'unlockAddress', 'onlyOwner', None, None, None]]",1
+0xfdf252995da6d6c54c03fc993e7aa6b593a57b8d.sol,Allowances,approve,require,"['NEQ', 'spender', '0']",[],1
+0xfe50dd5f60705f093371b1589794a1e39ce5a435.sol,SNGTContract,burnFrom,event,Approval,"[['Emit', 'SNGTContract', 'burn', 'Burn', '$Bool(True)', None, None], ['Emit', 'SNGTContract', 'burnFrom', 'Burn', '$Bool(True)', None, None]]",1
+0xfe53d681d34cf379782d25af69990f6a707d30d8.sol,ChainMonstersAuction,deedOfOwnerByIndex,require,"['LT', '_index', 'countOfDeedsByOwner']",[],1
