@@ -1,12 +1,12 @@
-# Proposed Templates in SmartCoCo
+# Summarized Templates in SmartCoCo
 
-This following shows the templates (patterns) and keywords summarized in SmartCoCo. They are summarized in one-time effort, developers can add custom patterns by following these patterns. The following patterns are case-insensitive.
+The following shows the templates (patterns) and keywords summarized in SmartCoCo. They are summarized in one-time effort, developers can add custom patterns by following these patterns. The following patterns are case-insensitive.
 
 To simplify the description, we use <> to record the words with POS tags to be extracted in the sentences, as we present in the paper. Besides, the meaning of other symbol are the same as the regular expression. 
 
 The keywords contains two parts, i.e. used for text matching and specific checking.
 
-To, see the source of these pattern, we also provide [a list of our analyzed contracts](./Analyzed contracts.md).
+To, see the source of these pattern, we also provide [a list of our analyzed contracts](https://github.com/SCCoCo/SmartCoCo/blob/main/Pattern/Analyzed%20contracts.md).
 
 ## Constraint Templates 
 
