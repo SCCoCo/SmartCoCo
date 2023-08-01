@@ -113,9 +113,9 @@ python3 analyzer/main.py -f ../Full dataset
 
 
 
-#### Summarized Patterns
+### Summarized Patterns
 
-Besides, our summarized patterns are in the folder `Pattern`.
+Besides, our summarized patterns are in [the folder `Pattern`](./Pattern/README.md).
 
 
 
