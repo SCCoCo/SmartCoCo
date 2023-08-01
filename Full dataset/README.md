@@ -4,11 +4,11 @@ This folder contains the full dataset of SmartCoCo.
 
 `contracts_address.csv` contains the addresses of these smart contracts. 
 
-`contracts/` folder contains the source code of all the contracts. Since there are more than 100K contracts, we have divided them with first hex number of  the contract address.
+The `contracts/` folder contains the source code of all the contracts. Since there are more than 100K contracts, we have divided them with first hex number of  the contract address.
 
-This following table shows the number of contract files in each folder as well as the total.
+The following table shows the number of contract files in each folder as well as the total.
 
-| Prefix | #No.   |
+| Prefix | # Smart Contract.   |
 | ------ | ------ |
 | 0      | 6444   |
 | 1      | 6424   |
